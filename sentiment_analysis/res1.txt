@@ -1,0 +1,27 @@
+Aplicando SMOTE para balancear las clases...
+Balanceo completo.
+Entrenando y validando Logistic Regression...
+Mejores parámetros para Logistic Regression: {'C': 10, 'penalty': 'l1'}
+Mejor F1 Macro promedio: 0.916828144815115
+Mejores parámetros para LinearSVC: {'C': 10, 'loss': 'squared_hinge'}
+Mejor F1 Macro promedio: 0.9165498548621558
+
+Entrenando y validando Random Forest...
+Mejores parámetros para Random Forest: {'max_depth': 20, 'min_samples_split': 2, 'n_estimators': 100}
+Mejor F1 Macro promedio: 0.8702292002257493
+
+Mejores parámetros para AdaBoost: {'learning_rate': 1, 'n_estimators': 100}
+Mejor F1 Macro promedio: 0.5773702381901216
+
+Mejores parámetros para AdaBoost: {'learning_rate': 1, 'n_estimators': 100}
+Mejor F1 Macro promedio: 0.5773702381901216
+
+Entrenando y validando Gradient Boosting...
+Mejores parámetros para Gradient Boosting: {'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 100}
+Mejor F1 Macro promedio: 0.8538193431299588
+
+Entrenando y validando MLPClassifier...
+Mejores parámetros para MLPClassifier: {'activation': 'relu', 'alpha': 0.001, 'hidden_layer_sizes': (100,)}
+Mejor F1 Macro promedio: 0.9576749965121574
+
+El mejor modelo es: MLPClassifier
