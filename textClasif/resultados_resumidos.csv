@@ -1,0 +1,193 @@
+Machine Learning Method,ML Method Parameters,Text Normalization,Text Representation,Avg F-Score
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: False,0.5442185792349726
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: False,0.6017907364506943
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: False,0.6994343113930743
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: False,0.6994343113930743
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: False,0.5778911061837892
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: False,0.36630417651694247
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: False,0.6611913521665086
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: False,0.6645143745143745
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: True,0.5442185792349726
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: True,0.6017907364506943
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: True,0.6017907364506943
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: True,0.6017907364506943
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: True,0.5778911061837892
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: True,0.35578304048892284
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: True,0.6375995306344816
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: True,0.6413301752011429
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: False,0.4975964579380139
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: False,0.5678709677419355
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: False,0.7011973967925232
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: False,0.6994343113930743
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: False,0.5687074829931973
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: False,0.3635671215487147
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: False,0.6611913521665086
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: False,0.6996528906280469
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: True,0.4975964579380139
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: True,0.5678709677419355
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: True,0.5678709677419355
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: True,0.5678709677419355
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: True,0.5687074829931973
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: True,0.3596927803379416
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: True,0.6705587152893944
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: True,0.6451570247933884
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: False,0.4162009419152276
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: False,0.35892857142857143
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: False,0.3582942830365511
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: False,0.5268109668109668
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: False,0.6421652507784866
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: False,0.3554124116260801
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: False,0.6992617771838552
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: False,0.6992617771838552
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: True,0.4162009419152276
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: True,0.35892857142857143
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: True,0.35892857142857143
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: True,0.35892857142857143
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: True,0.6421652507784866
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: True,0.35892857142857143
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: True,0.6816890700677017
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: True,0.6851475322063557
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: False,0.807196029776675
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: False,0.7018997752069741
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: False,0.7018997752069741
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: False,0.7018997752069741
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: False,0.7362599571884759
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: False,0.3573354735152488
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: False,0.7811902195301406
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: False,0.696721165013848
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: True,0.807196029776675
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: True,0.7018997752069741
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: True,0.7018997752069741
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: True,0.7018997752069741
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: True,0.7362599571884759
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: True,0.3573354735152488
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: True,0.8143494845075873
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: True,0.6924753080134407
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: False,0.7416345270890725
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: False,0.5963457526080476
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: False,0.6152907216494846
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: False,0.685447409733124
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: False,0.6375510204081632
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: False,0.36089528377298163
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: False,0.6108852459016394
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: False,0.678
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: True,0.7416345270890725
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: True,0.5963457526080476
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: True,0.5963457526080476
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: True,0.5963457526080476
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: True,0.6375510204081632
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: True,0.3675965327029157
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: True,0.6158236914600551
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Frecuencia - SVD: True,0.6409550045913683
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: False,0.5284145197736556
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: False,0.5169590129744682
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: False,0.6352616938097031
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: False,0.702567562307822
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: False,0.5815519125683061
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: False,0.3635671215487147
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: False,0.6353426573426574
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: False,0.6642120232708468
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: True,0.5284145197736556
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: True,0.5169590129744682
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: True,0.5169590129744682
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: True,0.5169590129744682
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: True,0.5815519125683061
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: True,0.3678449612403101
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: True,0.56998476770754
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Binarización - SVD: True,0.5889626359018183
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: False,0.4202825745682889
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: False,0.3655930871956009
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: False,0.35908589440504335
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: False,0.36124320124320125
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: False,0.6152907216494846
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: False,0.3592192954617582
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: False,0.6989355089355088
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: False,0.6604739704739705
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: True,0.4202825745682889
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: True,0.3655930871956009
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: True,0.3655930871956009
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: True,0.3655930871956009
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: True,0.6152907216494846
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: True,0.3600254817646122
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: True,0.6602120232708468
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",TF-IDF - SVD: True,0.6920408163265306
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: False,0.8819537815126051
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: False,0.9119298245614035
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: False,0.9119298245614035
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: False,0.9119298245614035
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: False,0.8075061716122406
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: False,0.4156910747485479
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: False,0.8263095653124978
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: False,0.9432633053221288
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: True,0.8721640145419869
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: True,0.9119298245614035
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: True,0.9119298245614035
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: True,0.9119298245614035
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: True,0.8075061716122406
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: True,0.4156910747485479
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: True,0.8748016155856497
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}",Embeddings - SVD: True,0.9474802180411466
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Frecuencia - SVD: False,0.5637647436411779
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Frecuencia - SVD: False,0.5675440714803187
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Frecuencia - SVD: False,0.7886677487161748
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Frecuencia - SVD: False,0.8541430217292287
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Frecuencia - SVD: False,0.5980347160929684
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Frecuencia - SVD: False,0.3689359713350989
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Frecuencia - SVD: False,0.6608002387223167
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Frecuencia - SVD: False,0.6353426573426574
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Frecuencia - SVD: True,0.5637647436411779
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Frecuencia - SVD: True,0.5675440714803187
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Frecuencia - SVD: True,0.5675440714803187
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Frecuencia - SVD: True,0.5675440714803187
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Frecuencia - SVD: True,0.5980347160929684
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Frecuencia - SVD: True,0.3492601067887109
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Frecuencia - SVD: True,0.7369458519622454
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Frecuencia - SVD: True,0.5894062576989405
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Binarización - SVD: False,0.5639987142397943
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Binarización - SVD: False,0.5639987142397943
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Binarización - SVD: False,0.7841136454581833
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Binarización - SVD: False,0.7561993561993562
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Binarización - SVD: False,0.6024568263277941
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Binarización - SVD: False,0.37260231177756953
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Binarización - SVD: False,0.6645143745143745
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Binarización - SVD: False,0.6645143745143745
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Binarización - SVD: True,0.5639987142397943
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Binarización - SVD: True,0.5639987142397943
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Binarización - SVD: True,0.5639987142397943
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Binarización - SVD: True,0.5639987142397943
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Binarización - SVD: True,0.6024568263277941
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Binarización - SVD: True,0.3463980463980464
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Binarización - SVD: True,0.6024568263277941
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Binarización - SVD: True,0.7331194295900177
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",TF-IDF - SVD: False,0.4197456290479547
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",TF-IDF - SVD: False,0.3554124116260801
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",TF-IDF - SVD: False,0.3582942830365511
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",TF-IDF - SVD: False,0.49871947824703733
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",TF-IDF - SVD: False,0.5787573883161512
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",TF-IDF - SVD: False,0.3518676122931442
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",TF-IDF - SVD: False,0.6642120232708468
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",TF-IDF - SVD: False,0.6645143745143745
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",TF-IDF - SVD: True,0.4197456290479547
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",TF-IDF - SVD: True,0.3554124116260801
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",TF-IDF - SVD: True,0.3554124116260801
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",TF-IDF - SVD: True,0.3554124116260801
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",TF-IDF - SVD: True,0.5787573883161512
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",TF-IDF - SVD: True,0.3554124116260801
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",TF-IDF - SVD: True,0.5894062576989405
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",TF-IDF - SVD: True,0.7960691916643181
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Embeddings - SVD: False,0.946497105045492
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Embeddings - SVD: False,0.9388626964433417
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Embeddings - SVD: False,0.9388626964433417
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Embeddings - SVD: False,0.9388626964433417
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Embeddings - SVD: False,0.7711348563006633
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Embeddings - SVD: False,0.3573354735152488
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Embeddings - SVD: False,0.946497105045492
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Embeddings - SVD: False,0.9344662927205623
+Logistic Regression,LogisticRegression(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Embeddings - SVD: True,0.9503180486597257
+Logistic Regression,"LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Embeddings - SVD: True,0.9388626964433417
+Naive Bayes,MultinomialNB(),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Embeddings - SVD: True,0.9388626964433417
+Naive Bayes,MultinomialNB(alpha=0.5),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Embeddings - SVD: True,0.9388626964433417
+SVM,SVC(kernel='linear'),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Embeddings - SVD: True,0.7711348563006633
+SVM,SVC(gamma=0.1),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Embeddings - SVD: True,0.3573354735152488
+MLP,MLPClassifier(max_iter=1000),"{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Embeddings - SVD: True,0.8846915155606103
+MLP,"MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)","{'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}",Embeddings - SVD: True,0.904760410367621

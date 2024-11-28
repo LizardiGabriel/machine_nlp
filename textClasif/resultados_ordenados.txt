@@ -1,0 +1,3072 @@
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Embeddings - SVD: True
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.78      0.88         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.97      0.98      0.97        59
+     Opinión       1.00      1.00      1.00         2
+  Tecnología       0.98      0.98      0.98        47
+
+    accuracy                           0.97       123
+   macro avg       0.96      0.95      0.95       123
+weighted avg       0.97      0.97      0.97       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: True
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.67      0.80         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.94      0.98      0.96        59
+     Opinión       1.00      1.00      1.00         2
+  Tecnología       0.98      0.98      0.98        47
+
+    accuracy                           0.96       123
+   macro avg       0.98      0.93      0.95       123
+weighted avg       0.96      0.96      0.96       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Embeddings - SVD: False
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.78      0.88         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.95      0.98      0.97        59
+     Opinión       1.00      1.00      1.00         2
+  Tecnología       0.98      0.96      0.97        47
+
+    accuracy                           0.96       123
+   macro avg       0.96      0.94      0.95       123
+weighted avg       0.96      0.96      0.96       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Embeddings - SVD: False
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.78      0.88         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.95      0.98      0.97        59
+     Opinión       1.00      1.00      1.00         2
+  Tecnología       0.98      0.96      0.97        47
+
+    accuracy                           0.96       123
+   macro avg       0.96      0.94      0.95       123
+weighted avg       0.96      0.96      0.96       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: False
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.67      0.80         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.95      0.97      0.96        59
+     Opinión       1.00      1.00      1.00         2
+  Tecnología       0.94      0.98      0.96        47
+
+    accuracy                           0.95       123
+   macro avg       0.98      0.92      0.94       123
+weighted avg       0.95      0.95      0.95       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Embeddings - SVD: False
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.78      0.88         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.93      0.97      0.95        59
+     Opinión       1.00      1.00      1.00         2
+  Tecnología       0.96      0.94      0.95        47
+
+    accuracy                           0.94       123
+   macro avg       0.95      0.94      0.94       123
+weighted avg       0.94      0.94      0.94       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Embeddings - SVD: False
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.78      0.88         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.93      0.97      0.95        59
+     Opinión       1.00      1.00      1.00         2
+  Tecnología       0.96      0.94      0.95        47
+
+    accuracy                           0.94       123
+   macro avg       0.95      0.94      0.94       123
+weighted avg       0.94      0.94      0.94       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Embeddings - SVD: False
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.78      0.88         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.93      0.97      0.95        59
+     Opinión       1.00      1.00      1.00         2
+  Tecnología       0.96      0.94      0.95        47
+
+    accuracy                           0.94       123
+   macro avg       0.95      0.94      0.94       123
+weighted avg       0.94      0.94      0.94       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Embeddings - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.78      0.88         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.93      0.97      0.95        59
+     Opinión       1.00      1.00      1.00         2
+  Tecnología       0.96      0.94      0.95        47
+
+    accuracy                           0.94       123
+   macro avg       0.95      0.94      0.94       123
+weighted avg       0.94      0.94      0.94       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Embeddings - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.78      0.88         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.93      0.97      0.95        59
+     Opinión       1.00      1.00      1.00         2
+  Tecnología       0.96      0.94      0.95        47
+
+    accuracy                           0.94       123
+   macro avg       0.95      0.94      0.94       123
+weighted avg       0.94      0.94      0.94       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Embeddings - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.78      0.88         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.93      0.97      0.95        59
+     Opinión       1.00      1.00      1.00         2
+  Tecnología       0.96      0.94      0.95        47
+
+    accuracy                           0.94       123
+   macro avg       0.95      0.94      0.94       123
+weighted avg       0.94      0.94      0.94       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Embeddings - SVD: False
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       0.88      0.78      0.82         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.95      0.97      0.96        59
+     Opinión       1.00      1.00      1.00         2
+  Tecnología       0.98      0.96      0.97        47
+
+    accuracy                           0.95       123
+   macro avg       0.93      0.94      0.93       123
+weighted avg       0.95      0.95      0.95       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: False
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.83      0.56      0.67         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.95      0.98      0.97        59
+     Opinión       1.00      1.00      1.00         2
+  Tecnología       0.92      0.94      0.93        47
+
+    accuracy                           0.93       123
+   macro avg       0.94      0.89      0.91       123
+weighted avg       0.93      0.93      0.93       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: False
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.83      0.56      0.67         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.95      0.98      0.97        59
+     Opinión       1.00      1.00      1.00         2
+  Tecnología       0.92      0.94      0.93        47
+
+    accuracy                           0.93       123
+   macro avg       0.94      0.89      0.91       123
+weighted avg       0.93      0.93      0.93       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: False
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.83      0.56      0.67         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.95      0.98      0.97        59
+     Opinión       1.00      1.00      1.00         2
+  Tecnología       0.92      0.94      0.93        47
+
+    accuracy                           0.93       123
+   macro avg       0.94      0.89      0.91       123
+weighted avg       0.93      0.93      0.93       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.83      0.56      0.67         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.95      0.98      0.97        59
+     Opinión       1.00      1.00      1.00         2
+  Tecnología       0.92      0.94      0.93        47
+
+    accuracy                           0.93       123
+   macro avg       0.94      0.89      0.91       123
+weighted avg       0.93      0.93      0.93       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.83      0.56      0.67         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.95      0.98      0.97        59
+     Opinión       1.00      1.00      1.00         2
+  Tecnología       0.92      0.94      0.93        47
+
+    accuracy                           0.93       123
+   macro avg       0.94      0.89      0.91       123
+weighted avg       0.93      0.93      0.93       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.83      0.56      0.67         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.95      0.98      0.97        59
+     Opinión       1.00      1.00      1.00         2
+  Tecnología       0.92      0.94      0.93        47
+
+    accuracy                           0.93       123
+   macro avg       0.94      0.89      0.91       123
+weighted avg       0.93      0.93      0.93       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Embeddings - SVD: True
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.78      0.88         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.95      0.97      0.96        59
+     Opinión       0.67      1.00      0.80         2
+  Tecnología       0.98      0.96      0.97        47
+
+    accuracy                           0.95       123
+   macro avg       0.89      0.94      0.90       123
+weighted avg       0.96      0.95      0.95       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Embeddings - SVD: True
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       0.89      0.89      0.89         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.97      0.97      0.97        59
+     Opinión       1.00      0.50      0.67         2
+  Tecnología       0.98      0.98      0.98        47
+
+    accuracy                           0.96       123
+   macro avg       0.94      0.87      0.88       123
+weighted avg       0.96      0.96      0.96       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: False
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.56      0.71         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.95      0.97      0.96        59
+     Opinión       0.67      1.00      0.80         2
+  Tecnología       0.92      0.96      0.94        47
+
+    accuracy                           0.93       123
+   macro avg       0.91      0.90      0.88       123
+weighted avg       0.94      0.93      0.93       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: True
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       0.83      0.56      0.67         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.92      0.98      0.95        59
+     Opinión       0.67      1.00      0.80         2
+  Tecnología       0.98      0.94      0.96        47
+
+    accuracy                           0.93       123
+   macro avg       0.88      0.89      0.87       123
+weighted avg       0.94      0.93      0.93       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: True
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.67      0.80         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.95      0.97      0.96        59
+     Opinión       0.50      1.00      0.67         2
+  Tecnología       0.94      0.94      0.94        47
+
+    accuracy                           0.93       123
+   macro avg       0.88      0.91      0.87       123
+weighted avg       0.94      0.93      0.94       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Frecuencia - SVD: False
+Modelo: Naive Bayes - MultinomialNB(alpha=0.5)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.44      0.62         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       1.00      0.97      0.98        59
+     Opinión       0.67      1.00      0.80         2
+  Tecnología       0.90      1.00      0.95        47
+
+    accuracy                           0.94       123
+   macro avg       0.89      0.88      0.85       123
+weighted avg       0.95      0.94      0.94       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: False
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.44      0.62         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.94      0.98      0.96        59
+     Opinión       0.50      1.00      0.67         2
+  Tecnología       0.98      0.96      0.97        47
+
+    accuracy                           0.93       123
+   macro avg       0.85      0.88      0.83       123
+weighted avg       0.95      0.93      0.93       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: True
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       0.86      0.67      0.75         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.92      0.97      0.94        59
+     Opinión       0.50      0.50      0.50         2
+  Tecnología       0.98      0.94      0.96        47
+
+    accuracy                           0.93       123
+   macro avg       0.82      0.81      0.81       123
+weighted avg       0.93      0.93      0.93       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: False
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       0.86      0.67      0.75         9
+    Deportes       1.00      0.83      0.91         6
+    Economía       0.93      0.93      0.93        59
+     Opinión       0.33      1.00      0.50         2
+  Tecnología       0.96      0.94      0.95        47
+
+    accuracy                           0.91       123
+   macro avg       0.82      0.87      0.81       123
+weighted avg       0.93      0.91      0.92       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: True
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       0.86      0.67      0.75         9
+    Deportes       1.00      0.83      0.91         6
+    Economía       0.93      0.93      0.93        59
+     Opinión       0.33      1.00      0.50         2
+  Tecnología       0.96      0.94      0.95        47
+
+    accuracy                           0.91       123
+   macro avg       0.82      0.87      0.81       123
+weighted avg       0.93      0.91      0.92       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: False
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       0.86      0.67      0.75         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.90      0.93      0.92        59
+     Opinión       0.50      0.50      0.50         2
+  Tecnología       0.96      0.94      0.95        47
+
+    accuracy                           0.91       123
+   macro avg       0.81      0.81      0.81       123
+weighted avg       0.91      0.91      0.91       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: True
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       0.86      0.67      0.75         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.90      0.93      0.92        59
+     Opinión       0.50      0.50      0.50         2
+  Tecnología       0.96      0.94      0.95        47
+
+    accuracy                           0.91       123
+   macro avg       0.81      0.81      0.81       123
+weighted avg       0.91      0.91      0.91       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: TF-IDF - SVD: True
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.33      0.50         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.92      0.97      0.94        59
+     Opinión       1.00      0.50      0.67         2
+  Tecnología       0.92      0.98      0.95        47
+
+    accuracy                           0.92       123
+   macro avg       0.94      0.76      0.80       123
+weighted avg       0.92      0.92      0.91       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Frecuencia - SVD: False
+Modelo: Naive Bayes - MultinomialNB()
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.44      0.62         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.97      0.97      0.97        59
+     Opinión       0.50      0.50      0.50         2
+  Tecnología       0.90      0.98      0.94        47
+
+    accuracy                           0.93       123
+   macro avg       0.85      0.78      0.79       123
+weighted avg       0.93      0.93      0.92       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Binarización - SVD: False
+Modelo: Naive Bayes - MultinomialNB()
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.33      0.50         9
+    Deportes       0.75      1.00      0.86         6
+    Economía       0.95      0.97      0.96        59
+     Opinión       1.00      0.50      0.67         2
+  Tecnología       0.90      0.98      0.94        47
+
+    accuracy                           0.92       123
+   macro avg       0.92      0.76      0.78       123
+weighted avg       0.93      0.92      0.91       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: False
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       0.83      0.56      0.67         9
+    Deportes       0.75      1.00      0.86         6
+    Economía       0.90      0.95      0.93        59
+     Opinión       0.50      0.50      0.50         2
+  Tecnología       0.98      0.94      0.96        47
+
+    accuracy                           0.91       123
+   macro avg       0.79      0.79      0.78       123
+weighted avg       0.91      0.91      0.91       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Embeddings - SVD: False
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       0.86      0.67      0.75         9
+    Deportes       0.67      1.00      0.80         6
+    Economía       0.95      0.95      0.95        59
+     Opinión       0.33      0.50      0.40         2
+  Tecnología       0.98      0.94      0.96        47
+
+    accuracy                           0.92       123
+   macro avg       0.76      0.81      0.77       123
+weighted avg       0.93      0.92      0.92       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Embeddings - SVD: True
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       0.86      0.67      0.75         9
+    Deportes       0.67      1.00      0.80         6
+    Economía       0.95      0.95      0.95        59
+     Opinión       0.33      0.50      0.40         2
+  Tecnología       0.98      0.94      0.96        47
+
+    accuracy                           0.92       123
+   macro avg       0.76      0.81      0.77       123
+weighted avg       0.93      0.92      0.92       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Binarización - SVD: False
+Modelo: Naive Bayes - MultinomialNB(alpha=0.5)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.33      0.50         9
+    Deportes       0.75      1.00      0.86         6
+    Economía       0.98      0.97      0.97        59
+     Opinión       0.50      0.50      0.50         2
+  Tecnología       0.90      1.00      0.95        47
+
+    accuracy                           0.93       123
+   macro avg       0.83      0.76      0.76       123
+weighted avg       0.93      0.93      0.92       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: False
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.33      0.50         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.94      0.98      0.96        59
+     Opinión       0.50      0.50      0.50         2
+  Tecnología       0.90      1.00      0.95        47
+
+    accuracy                           0.92       123
+   macro avg       0.87      0.70      0.74       123
+weighted avg       0.92      0.92      0.91       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: True
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.33      0.50         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.94      0.98      0.96        59
+     Opinión       0.50      0.50      0.50         2
+  Tecnología       0.90      1.00      0.95        47
+
+    accuracy                           0.92       123
+   macro avg       0.87      0.70      0.74       123
+weighted avg       0.92      0.92      0.91       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Frecuencia - SVD: True
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.90      0.97      0.93        59
+     Opinión       1.00      0.50      0.67         2
+  Tecnología       0.87      0.98      0.92        47
+
+    accuracy                           0.89       123
+   macro avg       0.95      0.67      0.74       123
+weighted avg       0.90      0.89      0.88       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: False
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       0.83      0.56      0.67         9
+    Deportes       0.75      1.00      0.86         6
+    Economía       0.92      0.92      0.92        59
+     Opinión       0.20      0.50      0.29         2
+  Tecnología       0.98      0.94      0.96        47
+
+    accuracy                           0.89       123
+   macro avg       0.74      0.78      0.74       123
+weighted avg       0.91      0.89      0.90       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: True
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       0.83      0.56      0.67         9
+    Deportes       0.75      1.00      0.86         6
+    Economía       0.92      0.92      0.92        59
+     Opinión       0.20      0.50      0.29         2
+  Tecnología       0.98      0.94      0.96        47
+
+    accuracy                           0.89       123
+   macro avg       0.74      0.78      0.74       123
+weighted avg       0.91      0.89      0.90       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Binarización - SVD: True
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.92      0.95      0.93        59
+     Opinión       1.00      0.50      0.67         2
+  Tecnología       0.84      0.98      0.90        47
+
+    accuracy                           0.89       123
+   macro avg       0.95      0.66      0.73       123
+weighted avg       0.90      0.89      0.87       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: False
+Modelo: Naive Bayes - MultinomialNB(alpha=0.5)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.44      0.62         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.94      0.98      0.96        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      0.98      0.94        47
+
+    accuracy                           0.93       123
+   macro avg       0.77      0.68      0.70       123
+weighted avg       0.92      0.93      0.91       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: False
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.86      0.67      0.75         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.87      0.93      0.90        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.96      0.91      0.93        47
+
+    accuracy                           0.89       123
+   macro avg       0.71      0.70      0.70       123
+weighted avg       0.89      0.89      0.89       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: False
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.86      0.67      0.75         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.87      0.93      0.90        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.96      0.91      0.93        47
+
+    accuracy                           0.89       123
+   macro avg       0.71      0.70      0.70       123
+weighted avg       0.89      0.89      0.89       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: False
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.86      0.67      0.75         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.87      0.93      0.90        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.96      0.91      0.93        47
+
+    accuracy                           0.89       123
+   macro avg       0.71      0.70      0.70       123
+weighted avg       0.89      0.89      0.89       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.86      0.67      0.75         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.87      0.93      0.90        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.96      0.91      0.93        47
+
+    accuracy                           0.89       123
+   macro avg       0.71      0.70      0.70       123
+weighted avg       0.89      0.89      0.89       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.86      0.67      0.75         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.87      0.93      0.90        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.96      0.91      0.93        47
+
+    accuracy                           0.89       123
+   macro avg       0.71      0.70      0.70       123
+weighted avg       0.89      0.89      0.89       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.86      0.67      0.75         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.87      0.93      0.90        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.96      0.91      0.93        47
+
+    accuracy                           0.89       123
+   macro avg       0.71      0.70      0.70       123
+weighted avg       0.89      0.89      0.89       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: False
+Modelo: Naive Bayes - MultinomialNB()
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.44      0.62         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.92      0.97      0.94        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.98      0.95        47
+
+    accuracy                           0.92       123
+   macro avg       0.77      0.68      0.70       123
+weighted avg       0.91      0.92      0.91       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: False
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.44      0.62         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.90      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.98      0.95        47
+
+    accuracy                           0.92       123
+   macro avg       0.76      0.68      0.70       123
+weighted avg       0.91      0.92      0.90       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: False
+Modelo: Naive Bayes - MultinomialNB()
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.44      0.62         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.92      0.95      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.98      0.95        47
+
+    accuracy                           0.91       123
+   macro avg       0.77      0.67      0.70       123
+weighted avg       0.91      0.91      0.90       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: False
+Modelo: Naive Bayes - MultinomialNB(alpha=0.5)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.44      0.62         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.92      0.95      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.98      0.95        47
+
+    accuracy                           0.91       123
+   macro avg       0.77      0.67      0.70       123
+weighted avg       0.91      0.91      0.90       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: False
+Modelo: Naive Bayes - MultinomialNB(alpha=0.5)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.44      0.62         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.92      0.95      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.98      0.95        47
+
+    accuracy                           0.91       123
+   macro avg       0.77      0.67      0.70       123
+weighted avg       0.91      0.91      0.90       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: False
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.44      0.62         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.92      0.97      0.94        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      0.98      0.94        47
+
+    accuracy                           0.92       123
+   macro avg       0.76      0.68      0.70       123
+weighted avg       0.91      0.92      0.90       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: False
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.44      0.62         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.92      0.97      0.94        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      0.98      0.94        47
+
+    accuracy                           0.92       123
+   macro avg       0.76      0.68      0.70       123
+weighted avg       0.91      0.92      0.90       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: False
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.44      0.62         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.93      0.97      0.95        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.88      0.98      0.93        47
+
+    accuracy                           0.92       123
+   macro avg       0.76      0.68      0.70       123
+weighted avg       0.91      0.92      0.90       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: False
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       0.83      0.56      0.67         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.89      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       1.00      0.94      0.97        47
+
+    accuracy                           0.91       123
+   macro avg       0.72      0.69      0.70       123
+weighted avg       0.91      0.91      0.91       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: True
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.56      0.71         9
+    Deportes       0.75      1.00      0.86         6
+    Economía       0.90      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.98      0.94      0.96        47
+
+    accuracy                           0.91       123
+   macro avg       0.73      0.69      0.69       123
+weighted avg       0.92      0.91      0.91       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: True
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       0.80      0.44      0.57         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.93      0.97      0.95        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      0.98      0.94        47
+
+    accuracy                           0.92       123
+   macro avg       0.73      0.68      0.69       123
+weighted avg       0.90      0.92      0.91       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: False
+Modelo: Naive Bayes - MultinomialNB(alpha=0.5)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.44      0.62         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.93      0.97      0.95        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      0.98      0.94        47
+
+    accuracy                           0.92       123
+   macro avg       0.74      0.68      0.69       123
+weighted avg       0.91      0.92      0.90       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: True
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.44      0.62         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.95      0.97      0.96        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.88      0.98      0.93        47
+
+    accuracy                           0.92       123
+   macro avg       0.74      0.68      0.69       123
+weighted avg       0.91      0.92      0.90       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: True
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.44      0.62         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.92      0.97      0.94        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      0.96      0.93        47
+
+    accuracy                           0.91       123
+   macro avg       0.74      0.67      0.68       123
+weighted avg       0.90      0.91      0.90       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: False
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.33      0.50         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.93      0.97      0.95        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.89      1.00      0.94        47
+
+    accuracy                           0.92       123
+   macro avg       0.76      0.66      0.68       123
+weighted avg       0.91      0.92      0.90       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: True
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.33      0.50         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.90      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.88      0.96      0.92        47
+
+    accuracy                           0.90       123
+   macro avg       0.76      0.65      0.67       123
+weighted avg       0.89      0.90      0.88       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: False
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.33      0.50         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.93      0.97      0.95        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      1.00      0.95        47
+
+    accuracy                           0.92       123
+   macro avg       0.74      0.66      0.66       123
+weighted avg       0.91      0.92      0.90       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Binarización - SVD: False
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.33      0.50         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.93      0.97      0.95        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      1.00      0.95        47
+
+    accuracy                           0.92       123
+   macro avg       0.74      0.66      0.66       123
+weighted avg       0.91      0.92      0.90       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Binarización - SVD: False
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.33      0.50         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.93      0.97      0.95        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      1.00      0.95        47
+
+    accuracy                           0.92       123
+   macro avg       0.74      0.66      0.66       123
+weighted avg       0.91      0.92      0.90       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: TF-IDF - SVD: False
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.33      0.50         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.93      0.97      0.95        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      1.00      0.95        47
+
+    accuracy                           0.92       123
+   macro avg       0.74      0.66      0.66       123
+weighted avg       0.91      0.92      0.90       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: False
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.33      0.50         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.95      0.97      0.96        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.89      1.00      0.94        47
+
+    accuracy                           0.92       123
+   macro avg       0.74      0.66      0.66       123
+weighted avg       0.91      0.92      0.90       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: TF-IDF - SVD: False
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.33      0.50         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.95      0.97      0.96        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.89      1.00      0.94        47
+
+    accuracy                           0.92       123
+   macro avg       0.74      0.66      0.66       123
+weighted avg       0.91      0.92      0.90       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: False
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.33      0.50         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.90      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.98      0.95        47
+
+    accuracy                           0.91       123
+   macro avg       0.74      0.66      0.66       123
+weighted avg       0.90      0.91      0.89       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: False
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.33      0.50         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.90      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.98      0.95        47
+
+    accuracy                           0.91       123
+   macro avg       0.74      0.66      0.66       123
+weighted avg       0.90      0.91      0.89       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Frecuencia - SVD: False
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.33      0.50         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.92      0.97      0.94        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      0.98      0.94        47
+
+    accuracy                           0.91       123
+   macro avg       0.74      0.66      0.66       123
+weighted avg       0.90      0.91      0.89       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: False
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.33      0.50         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.93      0.97      0.95        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.88      0.98      0.93        47
+
+    accuracy                           0.91       123
+   macro avg       0.74      0.66      0.66       123
+weighted avg       0.90      0.91      0.89       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: True
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.33      0.50         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.95      0.97      0.96        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.87      0.98      0.92        47
+
+    accuracy                           0.91       123
+   macro avg       0.74      0.66      0.66       123
+weighted avg       0.90      0.91      0.89       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: True
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.92      0.97      0.94        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.87      0.98      0.92        47
+
+    accuracy                           0.90       123
+   macro avg       0.76      0.63      0.65       123
+weighted avg       0.89      0.90      0.88       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: False
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.88      0.97      0.92        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      0.96      0.93        47
+
+    accuracy                           0.89       123
+   macro avg       0.76      0.63      0.64       123
+weighted avg       0.89      0.89      0.87       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: True
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.88      0.97      0.92        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      0.96      0.93        47
+
+    accuracy                           0.89       123
+   macro avg       0.76      0.63      0.64       123
+weighted avg       0.89      0.89      0.87       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: True
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       0.75      0.33      0.46         9
+    Deportes       1.00      0.83      0.91         6
+    Economía       0.88      0.97      0.92        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      0.94      0.92        47
+
+    accuracy                           0.89       123
+   macro avg       0.70      0.61      0.64       123
+weighted avg       0.87      0.89      0.87       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: True
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.33      0.50         9
+    Deportes       0.83      0.83      0.83         6
+    Economía       0.92      0.97      0.94        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.88      0.98      0.93        47
+
+    accuracy                           0.90       123
+   macro avg       0.73      0.62      0.64       123
+weighted avg       0.89      0.90      0.88       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: True
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.33      0.50         9
+    Deportes       0.83      0.83      0.83         6
+    Economía       0.89      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      0.96      0.93        47
+
+    accuracy                           0.89       123
+   macro avg       0.72      0.62      0.64       123
+weighted avg       0.88      0.89      0.88       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: False
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       0.60      0.33      0.43         9
+    Deportes       0.83      0.83      0.83         6
+    Economía       0.95      0.98      0.97        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      1.00      0.96        47
+
+    accuracy                           0.92       123
+   macro avg       0.66      0.63      0.64       123
+weighted avg       0.89      0.92      0.90       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: True
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       0.60      0.33      0.43         9
+    Deportes       0.83      0.83      0.83         6
+    Economía       0.95      0.98      0.97        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      1.00      0.96        47
+
+    accuracy                           0.92       123
+   macro avg       0.66      0.63      0.64       123
+weighted avg       0.89      0.92      0.90       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: False
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.93      0.97      0.95        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.89      1.00      0.94        47
+
+    accuracy                           0.91       123
+   macro avg       0.74      0.64      0.64       123
+weighted avg       0.90      0.91      0.89       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Frecuencia - SVD: False
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.93      0.97      0.95        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.89      1.00      0.94        47
+
+    accuracy                           0.91       123
+   macro avg       0.74      0.64      0.64       123
+weighted avg       0.90      0.91      0.89       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: False
+Modelo: Naive Bayes - MultinomialNB()
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       0.86      1.00      0.92         6
+    Economía       0.92      0.98      0.95        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      0.98      0.94        47
+
+    accuracy                           0.91       123
+   macro avg       0.74      0.64      0.64       123
+weighted avg       0.90      0.91      0.89       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: True
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       0.83      0.83      0.83         6
+    Economía       0.92      0.97      0.94        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.89      1.00      0.94        47
+
+    accuracy                           0.90       123
+   macro avg       0.73      0.60      0.62       123
+weighted avg       0.89      0.90      0.88       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: False
+Modelo: Naive Bayes - MultinomialNB()
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.88      0.98      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.98      0.95        47
+
+    accuracy                           0.90       123
+   macro avg       0.76      0.61      0.62       123
+weighted avg       0.90      0.90      0.87       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: False
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.88      0.98      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.98      0.95        47
+
+    accuracy                           0.90       123
+   macro avg       0.76      0.61      0.62       123
+weighted avg       0.90      0.90      0.87       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: True
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.88      0.98      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.98      0.95        47
+
+    accuracy                           0.90       123
+   macro avg       0.76      0.61      0.62       123
+weighted avg       0.90      0.90      0.87       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: False
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      1.00      1.00         6
+    Economía       0.90      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.87      0.98      0.92        47
+
+    accuracy                           0.89       123
+   macro avg       0.75      0.61      0.61       123
+weighted avg       0.89      0.89      0.86       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Binarización - SVD: False
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.88      0.97      0.92        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.88      0.98      0.93        47
+
+    accuracy                           0.89       123
+   macro avg       0.75      0.57      0.60       123
+weighted avg       0.88      0.89      0.86       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Binarización - SVD: True
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.88      0.97      0.92        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.88      0.98      0.93        47
+
+    accuracy                           0.89       123
+   macro avg       0.75      0.57      0.60       123
+weighted avg       0.88      0.89      0.86       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Binarización - SVD: True
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.88      0.97      0.92        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.88      0.98      0.93        47
+
+    accuracy                           0.89       123
+   macro avg       0.75      0.57      0.60       123
+weighted avg       0.88      0.89      0.86       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: False
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.90      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.85      0.98      0.91        47
+
+    accuracy                           0.89       123
+   macro avg       0.75      0.57      0.60       123
+weighted avg       0.88      0.89      0.86       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.90      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.85      0.98      0.91        47
+
+    accuracy                           0.89       123
+   macro avg       0.75      0.57      0.60       123
+weighted avg       0.88      0.89      0.86       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.90      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.85      0.98      0.91        47
+
+    accuracy                           0.89       123
+   macro avg       0.75      0.57      0.60       123
+weighted avg       0.88      0.89      0.86       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.90      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.85      0.98      0.91        47
+
+    accuracy                           0.89       123
+   macro avg       0.75      0.57      0.60       123
+weighted avg       0.88      0.89      0.86       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Frecuencia - SVD: False
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.92      0.95      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.82      0.98      0.89        47
+
+    accuracy                           0.88       123
+   macro avg       0.75      0.56      0.60       123
+weighted avg       0.88      0.88      0.85       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Frecuencia - SVD: True
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.92      0.95      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.82      0.98      0.89        47
+
+    accuracy                           0.88       123
+   macro avg       0.75      0.56      0.60       123
+weighted avg       0.88      0.88      0.85       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: False
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       0.80      0.67      0.73         6
+    Economía       0.92      0.98      0.95        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.89      1.00      0.94        47
+
+    accuracy                           0.90       123
+   macro avg       0.72      0.57      0.60       123
+weighted avg       0.89      0.90      0.88       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       0.80      0.67      0.73         6
+    Economía       0.92      0.98      0.95        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.89      1.00      0.94        47
+
+    accuracy                           0.90       123
+   macro avg       0.72      0.57      0.60       123
+weighted avg       0.89      0.90      0.88       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       0.80      0.67      0.73         6
+    Economía       0.92      0.98      0.95        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.89      1.00      0.94        47
+
+    accuracy                           0.90       123
+   macro avg       0.72      0.57      0.60       123
+weighted avg       0.89      0.90      0.88       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       0.80      0.67      0.73         6
+    Economía       0.92      0.98      0.95        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.89      1.00      0.94        47
+
+    accuracy                           0.90       123
+   macro avg       0.72      0.57      0.60       123
+weighted avg       0.89      0.90      0.88       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Frecuencia - SVD: True
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       0.80      0.67      0.73         6
+    Economía       0.89      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.88      0.98      0.93        47
+
+    accuracy                           0.89       123
+   macro avg       0.72      0.57      0.59       123
+weighted avg       0.88      0.89      0.86       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: TF-IDF - SVD: True
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.22      0.36         9
+    Deportes       0.80      0.67      0.73         6
+    Economía       0.89      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.88      0.98      0.93        47
+
+    accuracy                           0.89       123
+   macro avg       0.72      0.57      0.59       123
+weighted avg       0.88      0.89      0.86       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: True
+Modelo: MLP - MLPClassifier(hidden_layer_sizes=(200, 100), max_iter=2000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       0.75      1.00      0.86         6
+    Economía       0.97      0.97      0.97        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.85      1.00      0.92        47
+
+    accuracy                           0.90       123
+   macro avg       0.71      0.62      0.59       123
+weighted avg       0.90      0.90      0.87       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: False
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       0.83      0.83      0.83         6
+    Economía       0.90      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.89      1.00      0.94        47
+
+    accuracy                           0.89       123
+   macro avg       0.72      0.58      0.58       123
+weighted avg       0.89      0.89      0.86       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: True
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       0.83      0.83      0.83         6
+    Economía       0.90      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.89      1.00      0.94        47
+
+    accuracy                           0.89       123
+   macro avg       0.72      0.58      0.58       123
+weighted avg       0.89      0.89      0.86       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: TF-IDF - SVD: False
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       0.83      0.83      0.83         6
+    Economía       0.86      0.97      0.91        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.98      0.95        47
+
+    accuracy                           0.89       123
+   macro avg       0.72      0.58      0.58       123
+weighted avg       0.88      0.89      0.86       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: TF-IDF - SVD: True
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       0.83      0.83      0.83         6
+    Economía       0.86      0.97      0.91        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.98      0.95        47
+
+    accuracy                           0.89       123
+   macro avg       0.72      0.58      0.58       123
+weighted avg       0.88      0.89      0.86       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: False
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       0.83      0.83      0.83         6
+    Economía       0.89      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.88      0.98      0.93        47
+
+    accuracy                           0.89       123
+   macro avg       0.72      0.58      0.58       123
+weighted avg       0.88      0.89      0.85       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: True
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       0.83      0.83      0.83         6
+    Economía       0.89      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.88      0.98      0.93        47
+
+    accuracy                           0.89       123
+   macro avg       0.72      0.58      0.58       123
+weighted avg       0.88      0.89      0.85       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: True
+Modelo: MLP - MLPClassifier(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       0.71      0.83      0.77         6
+    Economía       0.93      0.97      0.95        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.87      1.00      0.93        47
+
+    accuracy                           0.89       123
+   macro avg       0.70      0.58      0.57       123
+weighted avg       0.89      0.89      0.86       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: False
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.85      0.97      0.90        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      0.98      0.94        47
+
+    accuracy                           0.88       123
+   macro avg       0.75      0.54      0.57       123
+weighted avg       0.87      0.88      0.85       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: True
+Modelo: SVM - SVC(kernel='linear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.85      0.97      0.90        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      0.98      0.94        47
+
+    accuracy                           0.88       123
+   macro avg       0.75      0.54      0.57       123
+weighted avg       0.87      0.88      0.85       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: False
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.88      0.97      0.92        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.87      0.98      0.92        47
+
+    accuracy                           0.88       123
+   macro avg       0.75      0.54      0.57       123
+weighted avg       0.87      0.88      0.85       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.88      0.97      0.92        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.87      0.98      0.92        47
+
+    accuracy                           0.88       123
+   macro avg       0.75      0.54      0.57       123
+weighted avg       0.87      0.88      0.85       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.88      0.97      0.92        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.87      0.98      0.92        47
+
+    accuracy                           0.88       123
+   macro avg       0.75      0.54      0.57       123
+weighted avg       0.87      0.88      0.85       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.88      0.97      0.92        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.87      0.98      0.92        47
+
+    accuracy                           0.88       123
+   macro avg       0.75      0.54      0.57       123
+weighted avg       0.87      0.88      0.85       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Frecuencia - SVD: False
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.89      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.85      0.98      0.91        47
+
+    accuracy                           0.88       123
+   macro avg       0.75      0.54      0.57       123
+weighted avg       0.87      0.88      0.85       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Frecuencia - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.89      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.85      0.98      0.91        47
+
+    accuracy                           0.88       123
+   macro avg       0.75      0.54      0.57       123
+weighted avg       0.87      0.88      0.85       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Frecuencia - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.89      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.85      0.98      0.91        47
+
+    accuracy                           0.88       123
+   macro avg       0.75      0.54      0.57       123
+weighted avg       0.87      0.88      0.85       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Frecuencia - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.89      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.85      0.98      0.91        47
+
+    accuracy                           0.88       123
+   macro avg       0.75      0.54      0.57       123
+weighted avg       0.87      0.88      0.85       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Binarización - SVD: False
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.89      0.95      0.92        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.84      0.98      0.90        47
+
+    accuracy                           0.87       123
+   macro avg       0.75      0.54      0.56       123
+weighted avg       0.87      0.87      0.84       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Binarización - SVD: False
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.89      0.95      0.92        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.84      0.98      0.90        47
+
+    accuracy                           0.87       123
+   macro avg       0.75      0.54      0.56       123
+weighted avg       0.87      0.87      0.84       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Binarización - SVD: True
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.89      0.95      0.92        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.84      0.98      0.90        47
+
+    accuracy                           0.87       123
+   macro avg       0.75      0.54      0.56       123
+weighted avg       0.87      0.87      0.84       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Binarización - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.89      0.95      0.92        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.84      0.98      0.90        47
+
+    accuracy                           0.87       123
+   macro avg       0.75      0.54      0.56       123
+weighted avg       0.87      0.87      0.84       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Binarización - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.89      0.95      0.92        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.84      0.98      0.90        47
+
+    accuracy                           0.87       123
+   macro avg       0.75      0.54      0.56       123
+weighted avg       0.87      0.87      0.84       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Binarización - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.89      0.95      0.92        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.84      0.98      0.90        47
+
+    accuracy                           0.87       123
+   macro avg       0.75      0.54      0.56       123
+weighted avg       0.87      0.87      0.84       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Frecuencia - SVD: False
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.90      0.95      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.82      0.98      0.89        47
+
+    accuracy                           0.87       123
+   macro avg       0.74      0.54      0.56       123
+weighted avg       0.87      0.87      0.84       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Frecuencia - SVD: True
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.90      0.95      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.82      0.98      0.89        47
+
+    accuracy                           0.87       123
+   macro avg       0.74      0.54      0.56       123
+weighted avg       0.87      0.87      0.84       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: False
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       0.67      0.67      0.67         6
+    Economía       0.90      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.87      0.98      0.92        47
+
+    accuracy                           0.88       123
+   macro avg       0.69      0.54      0.54       123
+weighted avg       0.87      0.88      0.85       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: True
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       1.00      0.11      0.20         9
+    Deportes       0.67      0.67      0.67         6
+    Economía       0.90      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.87      0.98      0.92        47
+
+    accuracy                           0.88       123
+   macro avg       0.69      0.54      0.54       123
+weighted avg       0.87      0.88      0.85       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: False
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.71      0.83      0.77         6
+    Economía       0.92      0.97      0.94        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.87      1.00      0.93        47
+
+    accuracy                           0.89       123
+   macro avg       0.50      0.56      0.53       123
+weighted avg       0.81      0.89      0.85       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: True
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.71      0.83      0.77         6
+    Economía       0.92      0.97      0.94        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.87      1.00      0.93        47
+
+    accuracy                           0.89       123
+   macro avg       0.50      0.56      0.53       123
+weighted avg       0.81      0.89      0.85       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: False
+Modelo: Naive Bayes - MultinomialNB(alpha=0.5)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       1.00      0.67      0.80         6
+    Economía       0.85      0.97      0.90        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.88      0.98      0.93        47
+
+    accuracy                           0.87       123
+   macro avg       0.55      0.52      0.53       123
+weighted avg       0.79      0.87      0.83       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: False
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.80      0.67      0.73         6
+    Economía       0.89      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.87      1.00      0.93        47
+
+    accuracy                           0.88       123
+   macro avg       0.51      0.53      0.52       123
+weighted avg       0.80      0.88      0.84       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.80      0.67      0.73         6
+    Economía       0.89      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.87      1.00      0.93        47
+
+    accuracy                           0.88       123
+   macro avg       0.51      0.53      0.52       123
+weighted avg       0.80      0.88      0.84       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.80      0.67      0.73         6
+    Economía       0.89      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.87      1.00      0.93        47
+
+    accuracy                           0.88       123
+   macro avg       0.51      0.53      0.52       123
+weighted avg       0.80      0.88      0.84       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.80      0.67      0.73         6
+    Economía       0.89      0.97      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.87      1.00      0.93        47
+
+    accuracy                           0.88       123
+   macro avg       0.51      0.53      0.52       123
+weighted avg       0.80      0.88      0.84       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: TF-IDF - SVD: False
+Modelo: Naive Bayes - MultinomialNB(alpha=0.5)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       1.00      0.50      0.67         6
+    Economía       0.84      0.97      0.90        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.88      0.98      0.93        47
+
+    accuracy                           0.86       123
+   macro avg       0.54      0.49      0.50       123
+weighted avg       0.79      0.86      0.82       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: False
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       1.00      0.50      0.67         6
+    Economía       0.88      0.97      0.92        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.84      0.98      0.90        47
+
+    accuracy                           0.86       123
+   macro avg       0.54      0.49      0.50       123
+weighted avg       0.79      0.86      0.82       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: True
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       1.00      0.50      0.67         6
+    Economía       0.88      0.97      0.92        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.84      0.98      0.90        47
+
+    accuracy                           0.86       123
+   macro avg       0.54      0.49      0.50       123
+weighted avg       0.79      0.86      0.82       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: False
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       1.00      0.17      0.29         6
+    Economía       0.80      0.97      0.88        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      0.98      0.94        47
+
+    accuracy                           0.85       123
+   macro avg       0.54      0.42      0.42       123
+weighted avg       0.78      0.85      0.79       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: True
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       1.00      0.17      0.29         6
+    Economía       0.80      0.97      0.88        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      0.98      0.94        47
+
+    accuracy                           0.85       123
+   macro avg       0.54      0.42      0.42       123
+weighted avg       0.78      0.85      0.79       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: TF-IDF - SVD: False
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       1.00      0.17      0.29         6
+    Economía       0.81      0.97      0.88        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.88      0.98      0.93        47
+
+    accuracy                           0.85       123
+   macro avg       0.54      0.42      0.42       123
+weighted avg       0.78      0.85      0.79       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: TF-IDF - SVD: True
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       1.00      0.17      0.29         6
+    Economía       0.81      0.97      0.88        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.88      0.98      0.93        47
+
+    accuracy                           0.85       123
+   macro avg       0.54      0.42      0.42       123
+weighted avg       0.78      0.85      0.79       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: False
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       1.00      0.17      0.29         6
+    Economía       0.80      0.97      0.88        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.88      0.96      0.92        47
+
+    accuracy                           0.84       123
+   macro avg       0.54      0.42      0.42       123
+weighted avg       0.77      0.84      0.79       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: True
+Modelo: Logistic Regression - LogisticRegression(max_iter=1000)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       1.00      0.17      0.29         6
+    Economía       0.80      0.97      0.88        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.88      0.96      0.92        47
+
+    accuracy                           0.84       123
+   macro avg       0.54      0.42      0.42       123
+weighted avg       0.77      0.84      0.79       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: False
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       1.00      0.17      0.29         6
+    Economía       0.74      1.00      0.85        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       1.00      0.89      0.94        47
+
+    accuracy                           0.83       123
+   macro avg       0.55      0.41      0.42       123
+weighted avg       0.78      0.83      0.78       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: True
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       1.00      0.17      0.29         6
+    Economía       0.74      1.00      0.85        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       1.00      0.89      0.94        47
+
+    accuracy                           0.83       123
+   macro avg       0.55      0.41      0.42       123
+weighted avg       0.78      0.83      0.78       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Binarización - SVD: False
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.81      1.00      0.89        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.94      1.00      0.97        47
+
+    accuracy                           0.86       123
+   macro avg       0.35      0.40      0.37       123
+weighted avg       0.75      0.86      0.80       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Frecuencia - SVD: False
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.81      0.98      0.89        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      1.00      0.96        47
+
+    accuracy                           0.85       123
+   macro avg       0.35      0.40      0.37       123
+weighted avg       0.74      0.85      0.79       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: True
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.83      0.98      0.90        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.89      1.00      0.94        47
+
+    accuracy                           0.85       123
+   macro avg       0.34      0.40      0.37       123
+weighted avg       0.74      0.85      0.79       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: True
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.76      0.98      0.86        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.98      0.98      0.98        47
+
+    accuracy                           0.85       123
+   macro avg       0.35      0.39      0.37       123
+weighted avg       0.74      0.85      0.79       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: False
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.78      1.00      0.87        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.96      0.96      0.96        47
+
+    accuracy                           0.85       123
+   macro avg       0.35      0.39      0.37       123
+weighted avg       0.74      0.85      0.79       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: False
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.79      1.00      0.88        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.94      0.96      0.95        47
+
+    accuracy                           0.85       123
+   macro avg       0.34      0.39      0.37       123
+weighted avg       0.74      0.85      0.78       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.79      1.00      0.88        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.94      0.96      0.95        47
+
+    accuracy                           0.85       123
+   macro avg       0.34      0.39      0.37       123
+weighted avg       0.74      0.85      0.78       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.79      1.00      0.88        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.94      0.96      0.95        47
+
+    accuracy                           0.85       123
+   macro avg       0.34      0.39      0.37       123
+weighted avg       0.74      0.85      0.78       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.79      1.00      0.88        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.94      0.96      0.95        47
+
+    accuracy                           0.85       123
+   macro avg       0.34      0.39      0.37       123
+weighted avg       0.74      0.85      0.78       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: False
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.76      1.00      0.86        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.98      0.94      0.96        47
+
+    accuracy                           0.84       123
+   macro avg       0.35      0.39      0.36       123
+weighted avg       0.74      0.84      0.78       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: False
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.76      1.00      0.86        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.98      0.94      0.96        47
+
+    accuracy                           0.84       123
+   macro avg       0.35      0.39      0.36       123
+weighted avg       0.74      0.84      0.78       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: False
+Modelo: Naive Bayes - MultinomialNB(alpha=0.5)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.80      0.97      0.88        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.88      0.98      0.93        47
+
+    accuracy                           0.84       123
+   macro avg       0.34      0.39      0.36       123
+weighted avg       0.72      0.84      0.78       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: False
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.74      1.00      0.85        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       1.00      0.91      0.96        47
+
+    accuracy                           0.83       123
+   macro avg       0.35      0.38      0.36       123
+weighted avg       0.74      0.83      0.77       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: True
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.75      1.00      0.86        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.98      0.91      0.95        47
+
+    accuracy                           0.83       123
+   macro avg       0.34      0.38      0.36       123
+weighted avg       0.73      0.83      0.77       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Binarización - SVD: True
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.86      0.95      0.90        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.81      1.00      0.90        47
+
+    accuracy                           0.84       123
+   macro avg       0.33      0.39      0.36       123
+weighted avg       0.72      0.84      0.78       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: False
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.76      1.00      0.86        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.96      0.91      0.93        47
+
+    accuracy                           0.83       123
+   macro avg       0.34      0.38      0.36       123
+weighted avg       0.73      0.83      0.77       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': False, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: False
+Modelo: Naive Bayes - MultinomialNB()
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.76      0.98      0.86        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.94      0.94      0.94        47
+
+    accuracy                           0.83       123
+   macro avg       0.34      0.38      0.36       123
+weighted avg       0.72      0.83      0.77       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: False
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.77      0.97      0.86        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.96      0.94        47
+
+    accuracy                           0.83       123
+   macro avg       0.34      0.38      0.36       123
+weighted avg       0.72      0.83      0.77       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.77      0.97      0.86        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.96      0.94        47
+
+    accuracy                           0.83       123
+   macro avg       0.34      0.38      0.36       123
+weighted avg       0.72      0.83      0.77       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.77      0.97      0.86        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.96      0.94        47
+
+    accuracy                           0.83       123
+   macro avg       0.34      0.38      0.36       123
+weighted avg       0.72      0.83      0.77       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.77      0.97      0.86        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.96      0.94        47
+
+    accuracy                           0.83       123
+   macro avg       0.34      0.38      0.36       123
+weighted avg       0.72      0.83      0.77       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: True
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.77      0.97      0.86        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.96      0.94        47
+
+    accuracy                           0.83       123
+   macro avg       0.34      0.38      0.36       123
+weighted avg       0.72      0.83      0.77       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: False
+Modelo: Naive Bayes - MultinomialNB()
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.78      0.97      0.86        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      0.96      0.93        47
+
+    accuracy                           0.83       123
+   macro avg       0.34      0.38      0.36       123
+weighted avg       0.72      0.83      0.77       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: TF-IDF - SVD: False
+Modelo: Naive Bayes - MultinomialNB()
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.78      0.97      0.86        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.90      0.96      0.93        47
+
+    accuracy                           0.83       123
+   macro avg       0.34      0.38      0.36       123
+weighted avg       0.72      0.83      0.77       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: False
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.73      1.00      0.84        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       1.00      0.89      0.94        47
+
+    accuracy                           0.82       123
+   macro avg       0.35      0.38      0.36       123
+weighted avg       0.73      0.82      0.76       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Embeddings - SVD: True
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.73      1.00      0.84        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       1.00      0.89      0.94        47
+
+    accuracy                           0.82       123
+   macro avg       0.35      0.38      0.36       123
+weighted avg       0.73      0.82      0.76       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Embeddings - SVD: False
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.73      1.00      0.84        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       1.00      0.89      0.94        47
+
+    accuracy                           0.82       123
+   macro avg       0.35      0.38      0.36       123
+weighted avg       0.73      0.82      0.76       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Embeddings - SVD: True
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.73      1.00      0.84        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       1.00      0.89      0.94        47
+
+    accuracy                           0.82       123
+   macro avg       0.35      0.38      0.36       123
+weighted avg       0.73      0.82      0.76       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: Frecuencia - SVD: True
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.92      0.93      0.92        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.75      1.00      0.85        47
+
+    accuracy                           0.83       123
+   macro avg       0.33      0.39      0.36       123
+weighted avg       0.72      0.83      0.77       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': True, 'lemmatization': True}
+Representación: TF-IDF - SVD: False
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.76      0.97      0.85        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.94      0.93        47
+
+    accuracy                           0.82       123
+   macro avg       0.34      0.38      0.36       123
+weighted avg       0.71      0.82      0.76       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: TF-IDF - SVD: False
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.76      0.97      0.85        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.94      0.93        47
+
+    accuracy                           0.82       123
+   macro avg       0.34      0.38      0.36       123
+weighted avg       0.71      0.82      0.76       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: TF-IDF - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.76      0.97      0.85        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.94      0.93        47
+
+    accuracy                           0.82       123
+   macro avg       0.34      0.38      0.36       123
+weighted avg       0.71      0.82      0.76       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: TF-IDF - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.76      0.97      0.85        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.94      0.93        47
+
+    accuracy                           0.82       123
+   macro avg       0.34      0.38      0.36       123
+weighted avg       0.71      0.82      0.76       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: TF-IDF - SVD: True
+Modelo: Logistic Regression - LogisticRegression(C=0.5, max_iter=2000, solver='liblinear')
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.76      0.97      0.85        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.94      0.93        47
+
+    accuracy                           0.82       123
+   macro avg       0.34      0.38      0.36       123
+weighted avg       0.71      0.82      0.76       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: TF-IDF - SVD: True
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.76      0.97      0.85        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.92      0.94      0.93        47
+
+    accuracy                           0.82       123
+   macro avg       0.34      0.38      0.36       123
+weighted avg       0.71      0.82      0.76       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: TF-IDF - SVD: False
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.75      0.97      0.84        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.91      0.91      0.91        47
+
+    accuracy                           0.81       123
+   macro avg       0.33      0.38      0.35       123
+weighted avg       0.71      0.81      0.75       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Frecuencia - SVD: True
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.95      0.90      0.92        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.70      1.00      0.82        47
+
+    accuracy                           0.81       123
+   macro avg       0.33      0.38      0.35       123
+weighted avg       0.72      0.81      0.76       123
+
+
+Normalización: {'tokenize': True, 'stopwords_removal': True, 'text_cleaning': False, 'lemmatization': False}
+Representación: Binarización - SVD: True
+Modelo: SVM - SVC(gamma=0.1)
+              precision    recall  f1-score   support
+
+     Cultura       0.00      0.00      0.00         9
+    Deportes       0.00      0.00      0.00         6
+    Economía       0.98      0.88      0.93        59
+     Opinión       0.00      0.00      0.00         2
+  Tecnología       0.67      1.00      0.80        47
+
+    accuracy                           0.80       123
+   macro avg       0.33      0.38      0.35       123
+weighted avg       0.73      0.80      0.75       123
+
+
