@@ -1,0 +1,22 @@
+Entrenando y validando Logistic Regression...
+Mejores parámetros para Logistic Regression: {'clf__C': 10, 'clf__penalty': 'l1'}
+Mejor F1 Macro promedio: 0.4166663274599826
+
+Entrenando y validando MLPClassifier...
+Mejores parámetros para MLPClassifier: {'clf__activation': 'relu', 'clf__alpha': 0.001, 'clf__hidden_layer_sizes': (100,)}
+Mejor F1 Macro promedio: 0.43702900475282747
+
+El mejor modelo es: MLPClassifier
+F1 Macro en el conjunto de prueba: 0.4598016409187077
+Reporte de clasificación:
+              precision    recall  f1-score   support
+
+           1       0.42      0.42      0.42       109
+           2       0.28      0.27      0.27       146
+           3       0.37      0.36      0.37       424
+           4       0.43      0.34      0.38      1176
+           5       0.83      0.88      0.86      4188
+
+    accuracy                           0.72      6043
+   macro avg       0.47      0.46      0.46      6043
+weighted avg       0.70      0.72      0.71      6043
