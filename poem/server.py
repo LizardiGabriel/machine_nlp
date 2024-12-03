@@ -1,21 +1,16 @@
-# Instalar el conector de MySQL
-# pip install mysql-connector-python
-
 from flask import Flask, request, jsonify
-import mysql.connector
-
-from mysql.connector import IntegrityError  # Importar excepción específica
+from pymongo import MongoClient
+from bson import ObjectId
 
 app = Flask(__name__)
 
-# Conectar a la base de datos MySQL
+
+# Configuración de la base de datos MongoDB
 def connect_db():
-    return mysql.connector.connect(
-        host='localhost',
-        user='root',
-        password='',
-        database='poems'
-    )
+    client = MongoClient('mongodb://localhost:27017/')  # Cambia según tu configuración
+    db = client['poems']  # Nombre de la base de datos
+    return db
+
 
 # Ruta para crear una cuenta de usuario
 @app.route('/createAccount', methods=['POST'])
@@ -30,22 +25,22 @@ def create_user():
     if not username or not email or not password:
         return jsonify({'error': 'Missing fields'}), 400
 
-    try:
-        with connect_db() as conn:
-            cursor = conn.cursor()
-            cursor.execute('INSERT INTO Users (user, correo, contra, foto_perfil_url) VALUES (%s, %s, %s, %s)',
-                           (username, email, password, foto_perfil_url))
-            conn.commit()
-    except IntegrityError as e:
-        # Manejar error de entrada duplicada
-        if 'Duplicate entry' in str(e):
-            return jsonify({'error': 'Email already exists'}), 409  # Código 409: Conflicto
-        else:
-            return jsonify({'error': 'Database error', 'details': str(e)}), 500
+    db = connect_db()
+    users_collection = db['users']
+
+    if users_collection.find_one({'correo': email}):
+        return jsonify({'error': 'Email already exists'}), 409  # Código 409: Conflicto
+
+    new_user = {
+        'user': username,
+        'correo': email,
+        'contra': password,
+        'foto_perfil_url': foto_perfil_url,
+        'fecha_registro': datetime.now().isoformat()
+    }
+    users_collection.insert_one(new_user)
 
     return jsonify({'message': 'User created successfully'}), 201
-
-
 
 
 # Ruta para iniciar sesión
@@ -59,10 +54,9 @@ def login():
     if not email or not password:
         return jsonify({'error': 'Missing fields'}), 400
 
-    with connect_db() as conn:
-        cursor = conn.cursor()
-        cursor.execute('SELECT * FROM Users WHERE correo = %s AND contra = %s', (email, password))
-        user = cursor.fetchone()
+    db = connect_db()
+    users_collection = db['users']
+    user = users_collection.find_one({'correo': email, 'contra': password})
 
     if not user:
         return jsonify({'error': 'Invalid credentials'}), 401
@@ -73,45 +67,31 @@ def login():
 # Ruta para obtener todos los poemas de todos los usuarios
 @app.route('/getPoems', methods=['GET'])
 def get_poems():
-    with connect_db() as conn:
-        cursor = conn.cursor()
-        # Consulta con JOIN para obtener la foto del perfil del usuario
-        cursor.execute('''
-            SELECT 
-                Posts.id, 
-                Posts.user_id, 
-                Posts.titulo, 
-                Posts.poema, 
-                Posts.descripcion, 
-                Posts.fecha_publicacion,
-                Users.foto_perfil_url,
-                Users.user
-            FROM Posts
-            INNER JOIN Users ON Posts.user_id = Users.id
-            ORDER BY Posts.fecha_publicacion DESC
-        ''')
-        poems = cursor.fetchall()
+    db = connect_db()
+    posts_collection = db['posts']
+    users_collection = db['users']
 
-    if not poems:
-        return jsonify({'message': 'No poems found'}), 404
-
-    # Convertir los resultados a una lista de diccionarios
+    # Consultar los poemas y añadir datos de usuario
+    poems = posts_collection.find().sort('fecha_publicacion', -1)
     poem_list = []
+
     for poem in poems:
+        user = users_collection.find_one({'_id': poem['user_id']})
         poem_list.append({
-            'id': poem[0],
-            'user_id': poem[1],  # ID del usuario
-            'titulo': poem[2],
-            'poema': poem[3],
-            'descripcion': poem[4],
-            'fecha_publicacion': poem[5].strftime('%Y-%m-%d %H:%M:%S'),
-            'foto_perfil_url': poem[6],
-            'usuario': poem[7]
+            'id': str(poem['_id']),
+            'user_id': str(poem['user_id']),
+            'titulo': poem['titulo'],
+            'poema': poem['poema'],
+            'descripcion': poem['descripcion'],
+            'fecha_publicacion': poem['fecha_publicacion'],
+            'foto_perfil_url': user['foto_perfil_url'] if user else None,
+            'usuario': user['user'] if user else 'Unknown'
         })
 
+    if not poem_list:
+        return jsonify({'message': 'No poems found'}), 404
+
     return jsonify({'poems': poem_list})
-
-
 
 
 # Ruta para obtener información de un usuario, incluida la foto de perfil
@@ -122,24 +102,22 @@ def get_user_info():
     if not user_id:
         return jsonify({'error': 'User ID is required'}), 400
 
-    with connect_db() as conn:
-        cursor = conn.cursor()
-        cursor.execute('SELECT * FROM Users WHERE id = %s', (user_id,))
-        user = cursor.fetchone()
+    db = connect_db()
+    users_collection = db['users']
+    user = users_collection.find_one({'_id': ObjectId(user_id)})
 
     if not user:
         return jsonify({'error': 'User not found'}), 404
 
     user_info = {
-        'id': user[0],
-        'user': user[1],
-        'correo': user[2],
-        'foto_perfil_url': user[4],  # URL de la foto de perfil
-        'fecha_registro': user[5].strftime('%Y-%m-%d %H:%M:%S')
+        'id': str(user['_id']),
+        'user': user['user'],
+        'correo': user['correo'],
+        'foto_perfil_url': user['foto_perfil_url'],
+        'fecha_registro': user['fecha_registro']
     }
 
     return jsonify({'user': user_info})
-
 
 
 # Ruta para crear un poema
@@ -156,17 +134,39 @@ def create_poem():
     if not user_id or not titulo or not poema or not descripcion:
         return jsonify({'error': 'Missing fields'}), 400
 
-    with connect_db() as conn:
-        cursor = conn.cursor()
-        cursor.execute('INSERT INTO Posts (user_id, titulo, poema, descripcion, fecha_publicacion) VALUES (%s, %s, %s, %s, NOW())',
-                       (user_id, titulo, poema, descripcion))
-        conn.commit()
+    db = connect_db()
+    posts_collection = db['posts']
+    new_post = {
+        'user_id': ObjectId(user_id),
+        'titulo': titulo,
+        'poema': poema,
+        'descripcion': descripcion,
+        'fecha_publicacion': datetime.now().strftime('%d/%m/%y %H:%M')
+    }
+    posts_collection.insert_one(new_post)
 
     return jsonify({'message': 'Poem created successfully'}), 201
+
+# ruta, recibe el correo de un usuario y retorna el id de ese usuario
+@app.route('/getUserId', methods=['GET'])
+def get_user_id():
+    email = request.args.get('correo')
+    if not email:
+        return jsonify({'error': 'Correo is required'}), 400
+
+    db = connect_db()
+    users_collection = db['users']
+    user = users_collection.find_one({'correo': email})
+
+    if not user:
+        return jsonify({'error': 'User not found'}), 404
+
+    return jsonify({'user_id': str(user['_id'])})
 
 
 
 
 # Iniciar el servidor
 if __name__ == '__main__':
+    from datetime import datetime
     app.run(debug=True, host='0.0.0.0', port=5001)
