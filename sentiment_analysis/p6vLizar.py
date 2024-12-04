@@ -25,23 +25,24 @@ df['Opinion'] = df['Opinion'].astype(str).fillna('')
 df['texto'] = df['Title'] + ' ' + df['Opinion']
 
 
-# Función para preprocesar texto
+# Función para preprocesar texto usando spaCy
 def preprocess_text(text, stopwords_removal=True):
-    # Procesar el texto con Stanza
-    doc = nlp_stanza(text)
+    # Procesar el texto con spaCy
+    doc = nlp_spacy(text)
 
-    # Extraer tokens con sus etiquetas gramaticales
-    tokens = [word for sentence in doc.sentences for word in sentence.words]
+    # Extraer tokens
+    tokens = [token.text for token in doc]
 
     # Eliminación de stopwords (opcional)
     if stopwords_removal:
-        tokens = [token.text for token in tokens if token.upos not in {'PRON', 'DET', 'ADP', 'CCONJ', 'AUX'}]
+        tokens = [token.text for token in doc if not token.is_stop]
     else:
-        tokens = [token.text for token in tokens]
+        tokens = [token.text for token in doc]
 
     return ' '.join(tokens)
 
 
+print('preprocesar texto')
 # Aplicar preprocesamiento
 df['texto'] = df['texto'].apply(lambda x: preprocess_text(x, stopwords_removal=True))
 
@@ -51,6 +52,7 @@ def generate_embeddings(texts):
     return np.array([nlp_spacy(text).vector for text in texts])
 
 
+print('generar embeddings')
 X = generate_embeddings(df['texto'])
 y = df['Polarity']
 

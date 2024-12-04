@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Configuración de la base de datos MongoDB
 def connect_db():
-    client = MongoClient('mongodb://localhost:27017/')  # Cambia según tu configuración
+    client = MongoClient('mongodb://192.168.0.207:27017/')  # Cambia según tu configuración
     db = client['poems']  # Nombre de la base de datos
     return db
 
