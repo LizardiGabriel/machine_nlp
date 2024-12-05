@@ -1,0 +1,74 @@
+/Users/gabriellizardi/anaconda3/envs/pythonProject/bin/python /Users/gabriellizardi/home/machine2/chats_conda/sent_ana_lizardi/train.py
+Evaluando modelo multinomial con método binario y balanceo
+(1, 37434)
+F1 Macro promedio para multinomial-binario-: 43.0%
+Evaluando modelo multinomial con método binario y balanceo smote
+(1, 37434)
+F1 Macro promedio para multinomial-binario-smote: 89.0%
+Evaluando modelo logistic con método binario y balanceo
+(1, 37434)
+F1 Macro promedio para logistic-binario-: 45.0%
+Evaluando modelo logistic con método binario y balanceo smote
+(1, 37434)
+F1 Macro promedio para logistic-binario-smote: 93.0%
+Evaluando modelo logistic1000 con método binario y balanceo
+(1, 37434)
+F1 Macro promedio para logistic1000-binario-: 45.0%
+Evaluando modelo logistic1000 con método binario y balanceo smote
+(1, 37434)
+F1 Macro promedio para logistic1000-binario-smote: 93.0%
+Evaluando modelo multinomial con método frecuencia y balanceo
+(1, 37434)
+F1 Macro promedio para multinomial-frecuencia-: 44.0%
+Evaluando modelo multinomial con método frecuencia y balanceo smote
+(1, 37434)
+F1 Macro promedio para multinomial-frecuencia-smote: 88.0%
+Evaluando modelo logistic con método frecuencia y balanceo
+(1, 37434)
+F1 Macro promedio para logistic-frecuencia-: 46.0%
+Evaluando modelo logistic con método frecuencia y balanceo smote
+(1, 37434)
+F1 Macro promedio para logistic-frecuencia-smote: 94.0%
+Evaluando modelo logistic1000 con método frecuencia y balanceo
+(1, 37434)
+F1 Macro promedio para logistic1000-frecuencia-: 46.0%
+Evaluando modelo logistic1000 con método frecuencia y balanceo smote
+(1, 37434)
+F1 Macro promedio para logistic1000-frecuencia-smote: 94.0%
+Evaluando modelo multinomial con método tfidf y balanceo
+(1, 37434)
+F1 Macro promedio para multinomial-tfidf-: 30.0%
+Evaluando modelo multinomial con método tfidf y balanceo smote
+(1, 37434)
+F1 Macro promedio para multinomial-tfidf-smote: 88.0%
+Evaluando modelo logistic con método tfidf y balanceo
+(1, 37434)
+F1 Macro promedio para logistic-tfidf-: 42.0%
+Evaluando modelo logistic con método tfidf y balanceo smote
+(1, 37434)
+F1 Macro promedio para logistic-tfidf-smote: 90.0%
+Evaluando modelo logistic1000 con método tfidf y balanceo
+(1, 37434)
+F1 Macro promedio para logistic1000-tfidf-: 42.0%
+Evaluando modelo logistic1000 con método tfidf y balanceo smote
+(1, 37434)
+F1 Macro promedio para logistic1000-tfidf-smote: 90.0%
+Mejor modelo: logistic con frecuencia y smote - F1 Macro: 94.0%
+Entrenando el mejor modelo en el conjunto completo con balanceo SMOTE...
+(1, 37434)
+Evaluando el modelo en el conjunto de prueba...
+F1 Macro: 47.318914242512925%
+              precision    recall  f1-score   support
+
+           1       0.42      0.50      0.45       104
+           2       0.28      0.30      0.29       145
+           3       0.34      0.40      0.37       422
+           4       0.38      0.46      0.42      1163
+           5       0.87      0.80      0.84      4209
+
+    accuracy                           0.69      6043
+   macro avg       0.46      0.49      0.47      6043
+weighted avg       0.72      0.69      0.70      6043
+
+
+Process finished with exit code 0
