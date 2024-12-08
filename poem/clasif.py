@@ -1,7 +1,10 @@
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, AutoConfig
 
 tokenizer = AutoTokenizer.from_pretrained("vapogore/clasificador-poemas")
 model = AutoModelForSequenceClassification.from_pretrained("vapogore/clasificador-poemas")
+
+config = AutoConfig.from_pretrained("vapogore/clasificador-poemas")
+print(config.id2label)  # Esto mostrará las etiquetas asociadas a cada índice
 
 def clasificar_poema(poema):
     inputs = tokenizer(poema, return_tensors="pt")

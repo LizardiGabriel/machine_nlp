@@ -1,120 +1,185 @@
-import json
-import requests
+from datetime import datetime
+from pymongo import MongoClient
 
-# URL base del servidor
-BASE_URL = 'http://localhost:5001'
+def connect_db():
+    client = MongoClient('mongodb://127.0.0.1:27017/')
+    db = client['poems']
+    return client, db
 
-# Función para crear un usuario
-def create_user(username, email, password, foto_perfil_url):
-    url = f'{BASE_URL}/createAccount'
-    data = {
-        'usuario': username,
-        'correo': email,
-        'contra': password,
-        'foto_perfil_url': foto_perfil_url
-    }
+def get_user_by_email_password(email, password):
+    client, db = connect_db()
+    try:
+        users_collection = db['users']
+        user = users_collection.find_one({'correo': email, 'contra': password})
+        return user
+    finally:
+        client.close()
 
-    response = requests.post(url, json=data)
-    if response.status_code == 201:
-        print('User created successfully')
-        return response.json()  # Retorna la respuesta con los detalles del usuario
-    else:
-        print('Error creating user:', response.json())
-        return None
+def drop_db():
+    client, db = connect_db()
+    try:
+        db.drop_collection('users')
+        db.drop_collection('posts')
+    finally:
+        client.close()
 
-# Función para crear un poema
-def create_poem(user_id, titulo, poema, descripcion):
-    url = f'{BASE_URL}/createPoem'
-    data = {
-        'user_id': user_id,
-        'titulo': titulo,
-        'poema': poema,
-        'descripcion': descripcion
-    }
+# Users
 
-    response = requests.post(url, json=data)
-    if response.status_code == 201:
-        print('Poem created successfully')
-    else:
-        print('Error creating poem:', response.json())
+def exists(user_id):
+    client, db = connect_db()
+    try:
+        users_collection = db['users']
+        user = users_collection.find_one({'_id': user_id})
+        return user is not None
+    finally:
+        client.close()
 
-# Función para obtener todos los poemas
-def get_poems():
-    url = f'{BASE_URL}/getPoems'
-    response = requests.get(url)
-    if response.status_code == 200:
-        poems = response.json().get('poems', [])
-        print(f'Found {len(poems)} poems:')
-        for poem in poems:
-            print(f"Title: {poem['titulo']}, Author: {poem['usuario']}, Date: {poem['fecha_publicacion']}")
-    else:
-        print('Error fetching poems:', response.json())
+def get_users():
+    client, db = connect_db()
+    try:
+        users_collection = db['users']
+        users = list(users_collection.find())
+        return users
+    finally:
+        client.close()
 
-# Función para obtener la información de un usuario
-def get_user_info(user_id):
-    url = f'{BASE_URL}/getUserInfo?user_id={user_id}'
-    response = requests.get(url)
-    if response.status_code == 200:
-        user_info = response.json().get('user', {})
-        print(f"User Info: {user_info}")
-    else:
-        print('Error fetching user info:', response.json())
-
+def set_user(username, email, password, foto_perfil_url, date):
+    client, db = connect_db()
+    try:
+        users_collection = db['users']
+        if users_collection.find_one({'correo': email}):
+            return -1
+        new_user = {
+            'user': username,
+            'correo': email,
+            'contra': password,
+            'foto_perfil_url': foto_perfil_url,
+            'fecha_registro': date
+        }
+        users_collection.insert_one(new_user)
+        return new_user['_id']
+    finally:
+        client.close()
 
 def get_uid(email):
-    url = f'{BASE_URL}/getUserId?correo={email}'
-    response = requests.get(url)
-    if response.status_code == 200:
-        user_id = response.json().get('user_id')
-        return user_id
-    else:
-        print('Error fetching user ID:', response.json())
+    client, db = connect_db()
+    try:
+        users_collection = db['users']
+        user = users_collection.find_one({'correo': email})
+        if not user:
+            return None
+        return user['_id']
+    finally:
+        client.close()
+
+def user_follow(user_id, user_id_to_follow):
+    if not exists(user_id) or not exists(user_id_to_follow):
+        return False
+
+    client, db = connect_db()
+    try:
+        users_collection = db['users']
+        users_collection.update_one(
+            {'_id': user_id},
+            {'$addToSet': {'following': user_id_to_follow}}
+        )
+        return True
+    finally:
+        client.close()
+
+def user_unfollow(user_id, user_id_to_unfollow):
+    if not exists(user_id) or not exists(user_id_to_unfollow):
+        return False
+
+    client, db = connect_db()
+    try:
+        users_collection = db['users']
+        users_collection.update_one(
+            {'_id': user_id},
+            {'$pull': {'following': user_id_to_unfollow}}
+        )
+        return True
+    finally:
+        client.close()
+
+def get_user_info_by_uid(user_id):
+    if not exists(user_id):
         return None
 
+    client, db = connect_db()
+    try:
+        users_collection = db['users']
+        user = users_collection.find_one({'_id': user_id})
+        user_info = {
+            'id': str(user['_id']),
+            'user': user['user'],
+            'correo': user['correo'],
+            'foto_perfil_url': user['foto_perfil_url'],
+            'fecha_registro': user['fecha_registro'],
+            'following': user.get('following', [])
+        }
+        return user_info
+    finally:
+        client.close()
 
+# Poems
 
-if __name__ == '__main__':
+def get_poems():
+    client, db = connect_db()
+    try:
+        posts_collection = db['posts']
+        poems = list(posts_collection.find())
+        return poems
+    finally:
+        client.close()
 
-    poema1 = 'Nunca conocí la felicidad;\nNo creía que los sueños se hicieran realidad;\nNo podía creer realmente que estaba enamorado;\nHasta que finalmente te conocí'
-    poema2 = 'Amarte no tiene fin ni principio;\nAmarte lo es todo;\nEs infinito en el tiempo;\nEs lo que siento por ti'
-    poema3 = 'El amor es un sentimiento;\nQue no se puede explicar;\nEs un sentimiento que se siente;\nY que se debe de respetar'
-    poema4 = 'Te amo con todo mi corazón;\nEres mi razón de ser;\nEres mi razón de vivir;\nEres mi razón de amar'
-    poema5 = 'tus ojos son como el mar;\nque me hacen soñar;\nme hacen volar;\nme hacen amar'
+def set_poem(user_id, titulo, poema, descripcion, date):
+    if not exists(user_id):
+        return False
 
-    foto_perfil1 = 'https://i.pinimg.com/736x/b1/f4/c4/b1f4c457b97adae52f9e1932cf21532d.jpg'
-    foto_perfil2 = 'https://i.pinimg.com/736x/52/f7/d7/52f7d7db7b0d3e366bbb8ca60c289008.jpg'
+    client, db = connect_db()
+    try:
+        posts_collection = db['posts']
+        new_post = {
+            'user_id': user_id,
+            'titulo': titulo,
+            'poema': poema,
+            'descripcion': descripcion,
+            'fecha_publicacion': date,
+            'likes': [],
+            'num_comentarios': 0
+        }
+        posts_collection.insert_one(new_post)
+        return new_post['_id']
+    finally:
+        client.close()
 
-    create_user('juan', 'juan', 'juan', foto_perfil1)
-    create_user('pepe', 'pepe', 'pepe', foto_perfil2)
-    create_user('mara', 'mara', 'mara', 'nada')
+def get_poems_following(user_id):
+    if not exists(user_id):
+        return None
 
-    user_id1 = get_uid('juan')
-    user_id2 = get_uid('pepe')
-    user_id3 = get_uid('mara')
-
-    create_poem(user_id1, 'Poema de amor', poema1, 'Poema de amor')
-    create_poem(user_id1, 'Poema de amor', poema2, 'Poema de amor')
-    create_poem(user_id1, 'Poema de amor', poema3, 'Poema de amor')
-    create_poem(user_id1, 'Poema de amor', poema4, 'Poema de amor')
-    create_poem(user_id1, 'Poema de amor', poema5, 'Poema de amor')
-
-    create_poem(user_id2, 'Poema de amor', poema1, 'Poema de amor')
-    create_poem(user_id2, 'Poema de amor', poema2, 'Poema de amor')
-    create_poem(user_id2, 'Poema de amor', poema3, 'Poema de amor')
-    create_poem(user_id2, 'Poema de amor', poema4, 'Poema de amor')
-    create_poem(user_id2, 'Poema de amor', poema5, 'Poema de amor')
-
-    create_poem(user_id3, 'Poema de amor', poema1, 'Poema de amor')
-    create_poem(user_id3, 'Poema de amor', poema2, 'Poema de amor')
-    create_poem(user_id3, 'Poema de amor', poema3, 'Poema de amor')
-    create_poem(user_id3, 'Poema de amor', poema4, 'Poema de amor')
-    create_poem(user_id3, 'sin foto', poema5, 'Poema de amor')
-
-
-    print("obtener la info del user1")
-    get_user_info(user_id1)
-    print("obtener la info del user2")
-    get_user_info(user_id2)
-
-
-
+    client, db = connect_db()
+    try:
+        users_collection = db['users']
+        posts_collection = db['posts']
+        user = users_collection.find_one({'_id': user_id})
+        following = user.get('following', [])
+        poems = posts_collection.find({'user_id': {'$in': following}}).sort('fecha_publicacion', -1)
+        poem_list = []
+        for poem in poems:
+            user = users_collection.find_one({'_id': poem['user_id']})
+            poem_list.append({
+                'id': str(poem['_id']),
+                'user_id': str(poem['user_id']),
+                'titulo': poem['titulo'],
+                'poema': poem['poema'],
+                'descripcion': poem['descripcion'],
+                'fecha_publicacion': poem['fecha_publicacion'],
+                'foto_perfil_url': user['foto_perfil_url'] if user else None,
+                'usuario': user['user'] if user else 'Unknown',
+                'likes': poem.get('likes', []),
+                'num_comentarios': poem.get('num_comentarios', 0)
+            })
+        return poem_list
+    finally:
+        client.close()
