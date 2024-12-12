@@ -38,11 +38,16 @@ def get_poems():
     decrypted_token = cipher_suite.decrypt(token.encode()).decode()
     user_id = decrypted_token.split(':')[1]
 
+    print('existe ese id?', exists(str(user_id)))
+
     print('user_id: ', user_id)
 
-    poem_list = get_poems_following(user_id)
+    poem_list = get_poems_by_followed_users(user_id)
     if not poem_list:
         print('No poems found')
         return jsonify({'message': 'No poems found'}), 404
 
     return jsonify({'poems': poem_list})
+
+
+

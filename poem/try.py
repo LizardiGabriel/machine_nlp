@@ -1,87 +1,49 @@
 # importar un modulo de otro archivo de este paquete
 
-from test import *
 
+from datetime import datetime
+from test import (
+    drop_db, set_user, user_follow, set_poem, get_poems_by_followed_users
+)
 
+# 1. Borrar la base de datos
+drop_db()
 
-def init():
-    drop_db()
+# 2. Crear 5 usuarios
+user1_id = set_user('user1', 'user1@example.com', 'password123', 'url_foto_user1', datetime.now().strftime('%d/%m/%y - %H:%M'))
+user2_id = set_user('user2', 'user2@example.com', 'password123', 'url_foto_user2', datetime.now().strftime('%d/%m/%y - %H:%M'))
+user3_id = set_user('user3', 'user3@example.com', 'password123', 'url_foto_user3', datetime.now().strftime('%d/%m/%y - %H:%M'))
+user4_id = set_user('user4', 'user4@example.com', 'password123', 'url_foto_user4', datetime.now().strftime('%d/%m/%y - %H:%M'))
+user5_id = set_user('user5', 'user5@example.com', 'password123', 'url_foto_user5', datetime.now().strftime('%d/%m/%y - %H:%M'))
 
-    # crear un usuario
-    juan_id = set_user(
-        'juan',
-        'juan',
-        'juan',
-        'juan',
-        datetime.now().strftime('%d/%m/%y - %H:%M'),
+# 3. Crear una red de seguimiento entre los usuarios
+user_follow(user1_id, user2_id)
+user_follow(user1_id, user3_id)
+user_follow(user2_id, user1_id)
+user_follow(user2_id, user4_id)
+user_follow(user3_id, user4_id)
+user_follow(user4_id, user5_id)
 
-    )
+# 4. Crear poemas para cada usuario
+set_poem(user1_id, 'Poema de la Naturaleza', 'El viento susurra...', 'Un poema sobre la belleza del mundo natural', datetime.now().strftime('%d/%m/%y - %H:%M'))
+set_poem(user2_id, 'Oda al Amor', 'En el jardín de mis sueños...', 'Un poema romántico', datetime.now().strftime('%d/%m/%y - %H:%M'))
+set_poem(user3_id, 'La Ciudad', 'Entre el asfalto y el neón...', 'Un poema urbano', datetime.now().strftime('%d/%m/%y - %H:%M'))
+set_poem(user4_id, 'Soledad', 'En la quietud de la noche...', 'Un poema reflexivo', datetime.now().strftime('%d/%m/%y - %H:%M'))
+set_poem(user5_id, 'Alegría', 'El sol brilla...', 'Un poema optimista', datetime.now().strftime('%d/%m/%y - %H:%M'))
 
+# 5. Obtener los poemas de las personas que sigue el usuario 1
+poemas_seguidos = get_poems_by_followed_users(user1_id)
 
-    david_id = set_user(
-        'david',
-        'david',
-        'david',
-        'david',
-        '02/02/2021 - 12:00'
-    )
-
-    gabriel_id = set_user(
-        'gabriel',
-        'gabriel',
-        'gabriel',
-        'gabriel',
-        '23/02/2021 - 12:00'
-    )
-
-    pepe_id = set_user(
-        'pepe',
-        'pepe',
-        'pepe',
-        'pepe',
-        '4/03/2021 - 12:00'
-    )
-
-    # juan sigue a david
-    user_follow(juan_id, david_id)
-    user_follow(david_id, gabriel_id)
-
-
-    juan_poem_id = set_poem(
-        juan_id,
-        'poema de juan',
-        'este es el poema de juan',
-        'poema de juan',
-        datetime.now().strftime('%d/%m/%y - %H:%M')
-    )
-
-    #david crea un poema
-    david_poem_id = set_poem(
-        david_id,
-        'poema de david',
-        'este es el poema de david',
-        'poema de david',
-        datetime.now().strftime('%d/%m/%y - %H:%M')
-    )
-
-    # gabriel crea un poema
-    gabriel_poem_id = set_poem(
-        gabriel_id,
-        'poema de gabriel',
-        'este es el poema de gabriel',
-        'poema de gabriel',
-        datetime.now().strftime('%d/%m/%y - %H:%M')
-    )
-
-def imprimirUsuarios():
-    print('Usuarios:')
-    for user in get_users():
-        print(user)
-    print()
-
-imprimirUsuarios()
-
-
+# Imprimir los poemas
+for poema in poemas_seguidos:
+    print(f"Título: {poema['titulo']}")
+    print(f"Poema: {poema['poema']}")
+    print(f"Descripción: {poema['descripcion']}")
+    print(f"Fecha de publicación: {poema['fecha_publicacion']}")
+    print(f"Usuario: {poema['usuario']}")
+    print(f"Foto de perfil: {poema['foto_perfil_url']}")
+    
+    print("-" * 20)
 
 
 

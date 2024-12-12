@@ -1,10 +1,13 @@
 from datetime import datetime
+
+from bson import ObjectId
 from pymongo import MongoClient
 
 def connect_db():
     client = MongoClient('mongodb://127.0.0.1:27017/')
     db = client['poems']
     return client, db
+
 
 def get_user_by_email_password(email, password):
     client, db = connect_db()
@@ -15,6 +18,7 @@ def get_user_by_email_password(email, password):
     finally:
         client.close()
 
+
 def drop_db():
     client, db = connect_db()
     try:
@@ -23,9 +27,10 @@ def drop_db():
     finally:
         client.close()
 
-# Users
 
+# Users
 def exists(user_id):
+    user_id = ObjectId(user_id)
     client, db = connect_db()
     try:
         users_collection = db['users']
@@ -33,6 +38,7 @@ def exists(user_id):
         return user is not None
     finally:
         client.close()
+
 
 def get_users():
     client, db = connect_db()
@@ -42,6 +48,7 @@ def get_users():
         return users
     finally:
         client.close()
+
 
 def set_user(username, email, password, foto_perfil_url, date):
     client, db = connect_db()
@@ -61,6 +68,7 @@ def set_user(username, email, password, foto_perfil_url, date):
     finally:
         client.close()
 
+
 def get_uid(email):
     client, db = connect_db()
     try:
@@ -72,7 +80,10 @@ def get_uid(email):
     finally:
         client.close()
 
+
 def user_follow(user_id, user_id_to_follow):
+    user_id = ObjectId(user_id)
+    user_id_to_follow = ObjectId(user_id_to_follow)
     if not exists(user_id) or not exists(user_id_to_follow):
         return False
 
@@ -87,7 +98,11 @@ def user_follow(user_id, user_id_to_follow):
     finally:
         client.close()
 
+
 def user_unfollow(user_id, user_id_to_unfollow):
+    user_id = ObjectId(user_id)
+    user_id_to_unfollow = ObjectId(user_id_to_unfollow)
+
     if not exists(user_id) or not exists(user_id_to_unfollow):
         return False
 
@@ -102,7 +117,9 @@ def user_unfollow(user_id, user_id_to_unfollow):
     finally:
         client.close()
 
+
 def get_user_info_by_uid(user_id):
+    user_id = ObjectId(user_id)
     if not exists(user_id):
         return None
 
@@ -122,8 +139,8 @@ def get_user_info_by_uid(user_id):
     finally:
         client.close()
 
-# Poems
 
+# Poems
 def get_poems():
     client, db = connect_db()
     try:
@@ -133,7 +150,9 @@ def get_poems():
     finally:
         client.close()
 
+
 def set_poem(user_id, titulo, poema, descripcion, date):
+    user_id = ObjectId(user_id)
     if not exists(user_id):
         return False
 
@@ -146,7 +165,7 @@ def set_poem(user_id, titulo, poema, descripcion, date):
             'poema': poema,
             'descripcion': descripcion,
             'fecha_publicacion': date,
-            'likes': [],
+            'likes': 0,
             'num_comentarios': 0
         }
         posts_collection.insert_one(new_post)
@@ -154,7 +173,10 @@ def set_poem(user_id, titulo, poema, descripcion, date):
     finally:
         client.close()
 
-def get_poems_following(user_id):
+
+
+def get_poems_by_followed_users(user_id):
+    user_id = ObjectId(user_id)
     if not exists(user_id):
         return None
 
@@ -162,24 +184,40 @@ def get_poems_following(user_id):
     try:
         users_collection = db['users']
         posts_collection = db['posts']
+
         user = users_collection.find_one({'_id': user_id})
-        following = user.get('following', [])
-        poems = posts_collection.find({'user_id': {'$in': following}}).sort('fecha_publicacion', -1)
-        poem_list = []
-        for poem in poems:
-            user = users_collection.find_one({'_id': poem['user_id']})
-            poem_list.append({
-                'id': str(poem['_id']),
-                'user_id': str(poem['user_id']),
-                'titulo': poem['titulo'],
-                'poema': poem['poema'],
-                'descripcion': poem['descripcion'],
-                'fecha_publicacion': poem['fecha_publicacion'],
-                'foto_perfil_url': user['foto_perfil_url'] if user else None,
-                'usuario': user['user'] if user else 'Unknown',
-                'likes': poem.get('likes', []),
-                'num_comentarios': poem.get('num_comentarios', 0)
-            })
-        return poem_list
+        followed_users = user.get('following', [])
+
+        poems = list(posts_collection.find({'user_id': {'$in': followed_users}}))
+
+        for poema in poems:
+            user_info = users_collection.find_one({'_id': poema['user_id']})
+            poema['user'] = user_info['user']
+            poema['foto_perfil_url'] = user_info['foto_perfil_url']
+
+        # retornar un json serializable
+        poems = [
+            {
+                'id': str(poema['_id']),
+                'user_id': str(poema['user_id']),
+                'titulo': poema['titulo'],
+                'poema': poema['poema'],
+                'descripcion': poema['descripcion'],
+                'fecha_publicacion': poema['fecha_publicacion'],
+                'foto_perfil_url': poema['foto_perfil_url'],
+                'usuario': poema['user'],
+                'num_likes': poema['likes'],
+                'num_comentarios': poema['num_comentarios']
+            }
+            for poema in poems
+        ]
+
+        print(poems)
+
+        return poems
     finally:
         client.close()
+
+
+
+
