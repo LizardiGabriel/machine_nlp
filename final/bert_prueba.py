@@ -44,6 +44,8 @@ class Dataset(torch.utils.data.Dataset):
 
 # --- Código principal ---
 
+# los datos incluyen: sadness (0), joy (1), love (2), anger (3), fear (4), surprise (5).
+
 ruta_train = "./data/train.jsonl"
 ruta_validation = "./data/validation.jsonl"
 ruta_test = "./data/test.jsonl"
@@ -113,8 +115,11 @@ train_results = trainer.train()
 # Imprimir los resultados del entrenamiento
 print(f"**Resultados del entrenamiento:**\n{train_results}")
 
-# Guardar el modelo y lo necesario para usarlo después
-trainer.save_model("./model")
+# Guardar el modelo y el tokenizer necesarios para usarlo después
+print("Guardando el modelo y el tokenizer...")
+trainer.save_model("./model")  # Guarda el modelo y los pesos
+tokenizer.save_pretrained("./model")  # Guarda el tokenizer
+print("Modelo y tokenizer guardados correctamente.")
 
 # Evaluar el modelo
 print("Evaluando el modelo...")
