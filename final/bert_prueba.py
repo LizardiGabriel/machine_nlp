@@ -1,47 +1,23 @@
-#pip install datasets
-#pip install transformers[torch]
-
 import torch
-from datasets import list_datasets
-from datasets import load_dataset
 import pandas as pd
 import matplotlib.pyplot as plt
 from transformers import BertTokenizer, TrainingArguments, BertForSequenceClassification, Trainer
+import json
+import numpy as np
 
-
-emotion_corpus = load_dataset("emotion")
-
-emotion_corpus_train = emotion_corpus['train']
-emotion_corpus_validation = emotion_corpus['validation']
-emotion_corpus_test = emotion_corpus['test']
-emotion_corpus_train.set_format(type="pandas")
-emotion_corpus_validation.set_format(type="pandas")
-emotion_corpus_test.set_format(type="pandas")
-df_emotion_corpus_train = emotion_corpus_train[:]
-df_emotion_corpus_validation = emotion_corpus_validation[:]
-df_emotion_corpus_test = emotion_corpus_test[:]
-
-print (df_emotion_corpus_validation)
-
-df_emotion_corpus_validation["label_name"] = df_emotion_corpus_validation["label"].apply(lambda x: emotion_corpus_validation.features["label"].int2str(x))
-print(df_emotion_corpus_validation[["text", "label_name"]])
-print (df_emotion_corpus_validation["label_name"])
-print (type(df_emotion_corpus_validation["label_name"]))
-label_name = df_emotion_corpus_validation["label_name"].unique()
-print (label_name)
-
-#https://huggingface.co/bert-base-uncased
-model_name = "bert-base-uncased"
-tokenizer = BertTokenizer.from_pretrained(model_name)
-
-#Training using pretrained model weights
-model_ckpt = "bert-base-uncased"
-#device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = (BertForSequenceClassification.from_pretrained(model_ckpt, num_labels=6))
-
-
+from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
+from sklearn.metrics import classification_report
 
 from sklearn.metrics import accuracy_score, f1_score
+
+
+def leer_jsonl(ruta_archivo):
+    datos = []
+    with open(ruta_archivo, 'r', encoding='utf-8') as f:
+        for linea in f:
+            datos.append(json.loads(linea))
+    return datos
+
 
 def compute_metrics(pred):
     labels = pred.label_ids
@@ -55,75 +31,112 @@ class Dataset(torch.utils.data.Dataset):
     def __init__(self, texts, labels=None):
         self.encodings = tokenizer(texts, padding=True, truncation=True, max_length=512)
         self.labels = labels
+
     def __getitem__(self, idx):
         item = {key: torch.tensor(val[idx]) for key, val in self.encodings.items()}
         if self.labels:
             item["labels"] = torch.tensor(self.labels[idx])
         return item
+
     def __len__(self):
         return len(self.encodings["input_ids"])
 
 
-train_dataset = Dataset(emotion_corpus["train"]["text"].tolist(), emotion_corpus["train"]["label"].tolist())
-validation_dataset = Dataset(emotion_corpus["validation"]["text"].tolist(), emotion_corpus["validation"]["label"].tolist())
-test_dataset = Dataset(emotion_corpus["test"]["text"].tolist(), emotion_corpus["test"]["label"].tolist())
+# --- Código principal ---
 
+ruta_train = "./data/train.jsonl"
+ruta_validation = "./data/validation.jsonl"
+ruta_test = "./data/test.jsonl"
 
-print (train_dataset.encodings["input_ids"][0])
-tokens = tokenizer.convert_ids_to_tokens(train_dataset.encodings["input_ids"][0])
-print (tokens)
-print(tokenizer.convert_tokens_to_string(tokens))
-print (train_dataset.labels[0])
+datos_train = leer_jsonl(ruta_train)
+datos_validation = leer_jsonl(ruta_validation)
+datos_test = leer_jsonl(ruta_test)
 
+# Convertir las listas de diccionarios a DataFrames de pandas
+df_emotion_corpus_train = pd.DataFrame(datos_train)
+df_emotion_corpus_validation = pd.DataFrame(datos_validation)
+df_emotion_corpus_test = pd.DataFrame(datos_test)
 
+print(df_emotion_corpus_validation)
+
+df_emotion_corpus_validation["label_name"] = df_emotion_corpus_validation["label"]
+print(df_emotion_corpus_validation[["text", "label_name"]])
+print(df_emotion_corpus_validation["label_name"])
+print(type(df_emotion_corpus_validation["label_name"]))
+
+label_name = df_emotion_corpus_validation["label_name"].unique()
+label_name = [str(label) for label in label_name]
+print('label name: ', label_name)
+
+#https://huggingface.co/bert-base-uncased
+model_name = "bert-base-uncased"
+tokenizer = BertTokenizer.from_pretrained(model_name)
+
+#Training using pretrained model weights
+model_ckpt = "bert-base-uncased"
+
+model = (BertForSequenceClassification.from_pretrained(model_ckpt, num_labels=6))
+
+# Crear los conjuntos de datos
+train_dataset = Dataset(df_emotion_corpus_train["text"].tolist(), df_emotion_corpus_train["label"].tolist())
+validation_dataset = Dataset(df_emotion_corpus_validation["text"].tolist(), df_emotion_corpus_validation["label"].tolist())
+test_dataset = Dataset(df_emotion_corpus_test["text"].tolist(), df_emotion_corpus_test["label"].tolist())
+
+# Definir los argumentos de entrenamiento
 training_args = TrainingArguments(
-    output_dir="output",
-    evaluation_strategy="steps",
-    eval_steps=100,
-    num_train_epochs=2,
-    seed=0,
+    output_dir='./results',
+    num_train_epochs=3,
+    per_device_train_batch_size=16,
+    per_device_eval_batch_size=64,
+    warmup_steps=500,
+    weight_decay=0.01,
+    logging_dir='./logs',
+    logging_steps=10,
+    evaluation_strategy="epoch",
+    save_strategy="epoch",
     load_best_model_at_end=True,
-    fp16=True)
+)
 
-
+# Crear el entrenador
 trainer = Trainer(
     model=model,
-    args = training_args,
-    compute_metrics=compute_metrics,
+    args=training_args,
     train_dataset=train_dataset,
     eval_dataset=validation_dataset,
-    tokenizer=tokenizer
+    compute_metrics=compute_metrics,
 )
-trainer.train()
 
+# Entrenar el modelo
+print("Entrenando el modelo...")
+train_results = trainer.train()
 
+# Imprimir los resultados del entrenamiento
+print(f"**Resultados del entrenamiento:**\n{train_results}")
+
+# Guardar el modelo y lo necesario para usarlo después
+trainer.save_model("./model")
+
+# Evaluar el modelo
+print("Evaluando el modelo...")
+eval_results = trainer.evaluate()
+
+# Imprimir los resultados de la evaluación
+print(f"**Resultados de la evaluación:**\n{eval_results}")
+
+# Obtener las predicciones para el conjunto de prueba
+print("Prediciendo las etiquetas del conjunto de prueba...")
 predictions = trainer.predict(test_dataset)
-print (predictions.metrics)
 
+# Obtener las etiquetas predichas
+predicted_labels = np.argmax(predictions.predictions, axis=1)
 
+# Imprimir el informe de clasificación
+print(classification_report(test_dataset.labels, predicted_labels, target_names=label_name))
 
-from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
+# Calcular la matriz de confusión
+cm = confusion_matrix(test_dataset.labels, predicted_labels)
 
-def plot_confusion_matrix(y_preds, y_true, labels):
-    cm = confusion_matrix(y_true, y_preds, normalize="true")
-    fig, ax = plt.subplots(figsize=(6, 6))
-    disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=labels)
-    disp.plot(cmap="Blues", values_format=".2f", ax=ax, colorbar=False)
-    plt.title("Normalized confusion matrix")
-    plt.show()
-
-
-import numpy as np
-
-print (predictions.predictions)
-y_preds = np.argmax(predictions.predictions, axis=-1)
-print (y_preds)
-y_test = emotion_corpus["test"]["label"].tolist()
-print (y_test)
-plot_confusion_matrix(y_preds, y_test, label_name)
-
-
-from sklearn.metrics import classification_report
-print(classification_report(y_test, y_preds, target_names=label_name))
-
-
+# Mostrar la matriz de confusión
+disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=label_name)
+disp.plot()
+plt.show()
