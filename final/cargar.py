@@ -1,5 +1,6 @@
 import torch
 from transformers import BertForSequenceClassification, BertTokenizer
+import time
 
 # Ruta del modelo guardado
 model_dir = "./model"
@@ -8,13 +9,8 @@ model_dir = "./model"
 tokenizer = BertTokenizer.from_pretrained(model_dir)
 model = BertForSequenceClassification.from_pretrained(model_dir)
 
-# Asegurarte de que el modelo esté en el dispositivo correcto (CPU o GPU)
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model.to(device)
-
-
 # Función para hacer predicciones
-def predict(texts):
+def predict(texts, device):
     model.eval()  # Modo de evaluación
     encodings = tokenizer(
         texts,
@@ -30,7 +26,6 @@ def predict(texts):
         predictions = torch.argmax(logits, dim=-1)
     return predictions.cpu().numpy()
 
-
 # Nuevos textos para predecir
 new_texts = [
     "I am feeling very excited about my vacation!",
@@ -42,10 +37,30 @@ new_texts = [
     "i feel shocked and sad at the fact that there are so many sick people"
 ]
 
-# Realizar las predicciones
-predictions = predict(new_texts)
+# --- Usando MPS ---
+device = torch.device("mps")
+model.to(device)
 
-# Imprimir los resultados
-print("Predicciones para los textos:")
-for text, pred in zip(new_texts, predictions):
+start_time = time.time()
+predictions_mps = predict(new_texts, device)
+end_time = time.time()
+
+print("Predicciones usando MPS:")
+for text, pred in zip(new_texts, predictions_mps):
     print(f"- Texto: '{text}' | Predicción: {pred}")
+
+print(f"Tiempo de ejecución con MPS: {end_time - start_time:.4f} segundos")
+
+# --- Usando CPU ---
+device = torch.device("cpu")
+model.to(device)
+
+start_time = time.time()
+predictions_cpu = predict(new_texts, device)
+end_time = time.time()
+
+print("\nPredicciones usando CPU:")
+for text, pred in zip(new_texts, predictions_cpu):
+    print(f"- Texto: '{text}' | Predicción: {pred}")
+
+print(f"Tiempo de ejecución con CPU: {end_time - start_time:.4f} segundos")

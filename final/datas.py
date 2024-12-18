@@ -9,32 +9,48 @@ def leer_jsonl(ruta_archivo):
             datos.append(json.loads(linea))
     return datos
 
-ruta_train = "./data/train.jsonl"
-ruta_validation = "./data/validation.jsonl"
-ruta_test = "./data/test.jsonl"
+ruta_train = "train.jsonl"
+ruta_validation = "validation.jsonl"
+ruta_test = "test.jsonl"
 
 datos_train = leer_jsonl(ruta_train)
 datos_validation = leer_jsonl(ruta_validation)
 datos_test = leer_jsonl(ruta_test)
 
 
-# imprimir 10datos de train que tengan en la columna label el valor 0
-print('datos de train con label 0: ', [dato for dato in datos_train if dato['label'] == 0][:10])
+def contar_labels(datos):
+    label_counts = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0}
+    for dato in datos:
+        label = dato.get('label')
+        if label in label_counts:
+            label_counts[label] += 1
+    return label_counts
 
-# imprimir 10datos de validation que tengan en la columna label el valor 1
-print('datos de validation con label 1: ', [dato for dato in datos_validation if dato['label'] == 1][:10])
+# Contar los labels en los datos de entrenamiento
+label_counts_train = contar_labels(datos_train)
+print('Label counts in training data:', label_counts_train)
 
-# imprimir 10datos de test que tengan en la columna label el valor 2
-print('datos de test con label 2: ', [dato for dato in datos_test if dato['label'] == 2][:10])
+# Contar los labels en los datos de validación
+label_counts_validation = contar_labels(datos_validation)
+print('Label counts in validation data:', label_counts_validation)
 
-# imprimir 10datos de train que tengan en la columna label el valor 3
-print('datos de train con label 3: ', [dato for dato in datos_train if dato['label'] == 3][:10])
-
-# imprimir 10datos de validation que tengan en la columna label el valor 4
-print('datos de validation con label 4: ', [dato for dato in datos_validation if dato['label'] == 4][:10])
-
-# imprimir 10datos de test que tengan en la columna label el valor 5
-print('datos de test con label 5: ', [dato for dato in datos_test if dato['label'] == 5][:10])
+# Contar los labels en los datos de prueba
+label_counts_test = contar_labels(datos_test)
+print('Label counts in test data:', label_counts_test)
 
 
+def contar_total_labels(label_counts_train):
+    total_count = sum(label_counts_train.values())
+    return total_count
 
+# Contar el total de labels en los datos de entrenamiento
+total_label_count_train = contar_total_labels(label_counts_train)
+print('Total label count in training data:', total_label_count_train)
+
+# Contar el total de labels en los datos de validación
+total_label_count_validation = contar_total_labels(label_counts_validation)
+print('Total label count in validation data:', total_label_count_validation)
+
+# Contar el total de labels en los datos de prueba
+total_label_count_test = contar_total_labels(label_counts_test)
+print('Total label count in test data:', total_label_count_test)

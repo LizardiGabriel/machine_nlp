@@ -7,7 +7,6 @@ import numpy as np
 
 from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
 from sklearn.metrics import classification_report
-
 from sklearn.metrics import accuracy_score, f1_score
 
 
@@ -70,6 +69,10 @@ label_name = df_emotion_corpus_validation["label_name"].unique()
 label_name = [str(label) for label in label_name]
 print('label name: ', label_name)
 
+
+device = torch.device("mps")
+
+
 #https://huggingface.co/bert-base-uncased
 model_name = "bert-base-uncased"
 tokenizer = BertTokenizer.from_pretrained(model_name)
@@ -78,6 +81,9 @@ tokenizer = BertTokenizer.from_pretrained(model_name)
 model_ckpt = "bert-base-uncased"
 
 model = (BertForSequenceClassification.from_pretrained(model_ckpt, num_labels=6))
+
+# Mover el modelo a la GPU
+model.to(device)
 
 # Crear los conjuntos de datos
 train_dataset = Dataset(df_emotion_corpus_train["text"].tolist(), df_emotion_corpus_train["label"].tolist())
@@ -96,7 +102,7 @@ training_args = TrainingArguments(
     logging_steps=10,
     evaluation_strategy="epoch",
     save_strategy="epoch",
-    load_best_model_at_end=True,
+    load_best_model_at_end=True
 )
 
 # Crear el entrenador
