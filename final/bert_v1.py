@@ -1,13 +1,17 @@
 import torch
 import pandas as pd
 import matplotlib.pyplot as plt
-from transformers import BertTokenizer, TrainingArguments, BertForSequenceClassification, Trainer
+from transformers import BertTokenizer, TrainingArguments, BertForSequenceClassification, Trainer, AutoModelForSequenceClassification
 import json
 import numpy as np
 
 from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
 from sklearn.metrics import classification_report
 from sklearn.metrics import accuracy_score, f1_score
+
+
+from transformers import AutoTokenizer, AutoModelForMaskedLM
+
 
 
 def leer_jsonl(ruta_archivo):
@@ -73,14 +77,14 @@ print('label name: ', label_name)
 device = torch.device("mps")
 
 
-#https://huggingface.co/bert-base-uncased
-model_name = "bert-base-uncased"
-tokenizer = BertTokenizer.from_pretrained(model_name)
+model_name = "dccuchile/bert-base-spanish-wwm-uncased"
 
-#Training using pretrained model weights
-model_ckpt = "bert-base-uncased"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=5)
 
-model = (BertForSequenceClassification.from_pretrained(model_ckpt, num_labels=6))
+
+
+
 
 # Mover el modelo a la GPU
 model.to(device)

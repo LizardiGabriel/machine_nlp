@@ -1,6 +1,16 @@
 import pandas as pd
 import json
 
+"""
+todo: 
+Se han eliminado los nombres de usuario.
+Se han eliminado las URL.
+Se han eliminado la etiqueta # de los hashtags.
+Se han eliminado las vocales seguidas más de dos veces: convertimos largoooooo en largoo.
+Se han eliminado stopwords.
+Y se han seleccionado solamente caracteres alfanuméricos, eliminando emojis y cualquier caracter especial).
+"""
+
 
 def procesar_corpus(ruta_archivo, ruta_salida_train, ruta_salida_validation, ruta_salida_test):
 
