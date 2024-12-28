@@ -49,9 +49,9 @@ class Dataset(torch.utils.data.Dataset):
 
 # los datos incluyen: sadness (0), joy (1), love (2), anger (3), fear (4), surprise (5).
 
-ruta_train = "train.jsonl"
-ruta_validation = "validation.jsonl"
-ruta_test = "test.jsonl"
+ruta_train = "./data_span/train.jsonl"
+ruta_validation = "./data_span/validation.jsonl"
+ruta_test = "./data_span/test.jsonl"
 
 datos_train = leer_jsonl(ruta_train)
 datos_validation = leer_jsonl(ruta_validation)
@@ -74,15 +74,18 @@ label_name = [str(label) for label in label_name]
 print('label name: ', label_name)
 
 
+# Definir el dispositivo a utilizar
 device = torch.device("mps")
 
 
-model_name = "dccuchile/bert-base-spanish-wwm-uncased"
 
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=5)
+# https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased
+model_name = "dccuchile/bert-base-spanish-wwm-cased"
+tokenizer = BertTokenizer.from_pretrained(model_name)
 
-
+#Training using pretrained model weights
+model_ckpt = "dccuchile/bert-base-spanish-wwm-cased"
+model = (BertForSequenceClassification.from_pretrained(model_ckpt, num_labels=5))
 
 
 
@@ -127,8 +130,8 @@ print(f"**Resultados del entrenamiento:**\n{train_results}")
 
 # Guardar el modelo y el tokenizer necesarios para usarlo después
 print("Guardando el modelo y el tokenizer...")
-trainer.save_model("./model")  # Guarda el modelo y los pesos
-tokenizer.save_pretrained("./model")  # Guarda el tokenizer
+trainer.save_model("./model_span")  # Guarda el modelo y los pesos
+tokenizer.save_pretrained("./model_span")  # Guarda el tokenizer
 print("Modelo y tokenizer guardados correctamente.")
 
 # Evaluar el modelo
