@@ -45,9 +45,9 @@ class Dataset(torch.utils.data.Dataset):
 
 # los datos incluyen: sadness (0), joy (1), love (2), anger (3), fear (4), surprise (5).
 
-ruta_train = "./data_prueba/train.jsonl"
-ruta_validation = "./data_prueba/validation.jsonl"
-ruta_test = "./data_prueba/test.jsonl"
+ruta_train = "./data/train.jsonl"
+ruta_validation = "./data/validation.jsonl"
+ruta_test = "./data/test.jsonl"
 
 datos_train = leer_jsonl(ruta_train)
 datos_validation = leer_jsonl(ruta_validation)

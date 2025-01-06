@@ -1,3 +1,4 @@
+import time
 import torch
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -47,7 +48,10 @@ class Dataset(torch.utils.data.Dataset):
 
 # --- Código principal ---
 
-# los datos incluyen: sadness (0), joy (1), love (2), anger (3), fear (4), surprise (5).
+# Iniciar el temporizador
+start_time = time.time()
+
+# los datos incluyen del 0 al 4.
 
 ruta_train = "./data_span/train.jsonl"
 ruta_validation = "./data_span/validation.jsonl"
@@ -65,8 +69,11 @@ df_emotion_corpus_test = pd.DataFrame(datos_test)
 print(df_emotion_corpus_validation)
 
 df_emotion_corpus_validation["label_name"] = df_emotion_corpus_validation["label"]
+# imprimir el texto y la etiqueta
 print(df_emotion_corpus_validation[["text", "label_name"]])
+# imprimir la etiqueta
 print(df_emotion_corpus_validation["label_name"])
+# imprimir el tipo de la etiqueta
 print(type(df_emotion_corpus_validation["label_name"]))
 
 label_name = df_emotion_corpus_validation["label_name"].unique()
@@ -78,14 +85,12 @@ print('label name: ', label_name)
 device = torch.device("mps")
 
 
-
 # https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased
-model_name = "dccuchile/bert-base-spanish-wwm-cased"
-tokenizer = BertTokenizer.from_pretrained(model_name)
+downloaded_model = "./beto_span_cased"
+tokenizer = AutoTokenizer.from_pretrained(downloaded_model)
+model = AutoModelForSequenceClassification.from_pretrained(downloaded_model, num_labels=5)
 
-#Training using pretrained model weights
-model_ckpt = "dccuchile/bert-base-spanish-wwm-cased"
-model = (BertForSequenceClassification.from_pretrained(model_ckpt, num_labels=5))
+
 
 
 
@@ -101,8 +106,8 @@ test_dataset = Dataset(df_emotion_corpus_test["text"].tolist(), df_emotion_corpu
 training_args = TrainingArguments(
     output_dir='./results',
     num_train_epochs=3,
-    per_device_train_batch_size=16,
-    per_device_eval_batch_size=64,
+    per_device_train_batch_size=11,
+    per_device_eval_batch_size=44,
     warmup_steps=500,
     weight_decay=0.01,
     logging_dir='./logs',
@@ -110,6 +115,9 @@ training_args = TrainingArguments(
     evaluation_strategy="epoch",
     save_strategy="epoch",
     load_best_model_at_end=True
+
+    #learning_rate=1e-6,  # Configura la tasa de aprendizaje a 1e-6
+    # max_grad_norm=1.0    # Mantiene el recorte de gradiente con norma máxima de 1.0
 )
 
 # Crear el entrenador
@@ -123,10 +131,10 @@ trainer = Trainer(
 
 # Entrenar el modelo
 print("Entrenando el modelo...")
-train_results = trainer.train()
+trainer.train()
 
 # Imprimir los resultados del entrenamiento
-print(f"**Resultados del entrenamiento:**\n{train_results}")
+print(f"**Resultados del entrenamiento:**\n")
 
 # Guardar el modelo y el tokenizer necesarios para usarlo después
 print("Guardando el modelo y el tokenizer...")
@@ -158,3 +166,12 @@ cm = confusion_matrix(test_dataset.labels, predicted_labels)
 disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=label_name)
 disp.plot()
 plt.show()
+
+# Detener el temporizador
+end_time = time.time()
+
+# Calcular el tiempo transcurrido
+elapsed_time = end_time - start_time
+
+# Imprimir el tiempo de ejecución
+print(f"Tiempo de ejecución del programa: {elapsed_time:.2f} segundos")

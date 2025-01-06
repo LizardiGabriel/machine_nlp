@@ -11,12 +11,16 @@ def procesar_corpus(ruta_archivo, ruta_salida_train, ruta_salida_validation, rut
     df['text'] = df['Title'] + ' ' + df['Opinion']
     df = df.rename(columns={'Polarity': 'label'})
 
-
     df = df.drop(['Title', 'Opinion'], axis=1)
 
+    # Reasignar etiquetas para que estén en el rango de 0 a 4
+    df['label'] = df['label'] - 1
 
-    # Dividir el DataFrame en conjuntos de entrenamiento, validación y prueba (70%, 15%, 15%)
-    train_df = df.sample(frac=0.70, random_state=0)
+    # Verificar que las etiquetas estén en el rango correcto
+    print("Etiquetas únicas después de la reasignación:", df['label'].unique())
+
+    # Dividir el DataFrame en conjuntos de entrenamiento, validación y prueba (80%, 10%, 10%)
+    train_df = df.sample(frac=0.80, random_state=0)
     rest_df = df.drop(train_df.index)
     validation_df = rest_df.sample(frac=0.5, random_state=0)
     test_df = rest_df.drop(validation_df.index)
@@ -32,7 +36,6 @@ def guardar_jsonl(df, ruta_archivo):
         for index, row in df.iterrows():
             json.dump({'text': row['text'], 'label': int(row['label'])}, f, ensure_ascii=False)
             f.write('\n')
-
 
 
 # Rutas de los archivos

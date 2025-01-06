@@ -9,9 +9,10 @@ def leer_jsonl(ruta_archivo):
             datos.append(json.loads(linea))
     return datos
 
-ruta_train = "train.jsonl"
-ruta_validation = "validation.jsonl"
-ruta_test = "test.jsonl"
+
+ruta_train = "./data_span/train.jsonl"
+ruta_validation = "./data_span/validation.jsonl"
+ruta_test = "./data_span/test.jsonl"
 
 datos_train = leer_jsonl(ruta_train)
 datos_validation = leer_jsonl(ruta_validation)
